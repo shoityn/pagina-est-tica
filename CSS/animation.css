@@ -1,0 +1,197 @@
+:root {
+    --0-x: %;
+    --0-y: %;
+    --16-x: %;
+    --16-y: %;
+    --33-x: %;
+    --33-y: %;
+    --50-x: %;
+    --50-y: %;
+    --66-x: %;
+    --66-y:%;
+    --83-x:%;
+    --83-y:%;
+    --100-x: %;
+    --100-y: %;
+    --time-animation: 8s;
+}
+/*
+    posicoes 1: 10%   25% 
+    posicoes 2: 10%   75% 
+    posicoes 3: 44%   75% 
+    posicoes 4: 77%   75% 
+    posicoes 5: 77%   25% 
+    posicoes 6: 44%   25% 
+*/
+
+#ply_1 {
+    --0-x: 10%;  /*pos1*/
+    --0-y: 25%;
+    --16-x: 44%; /*pos6*/
+    --16-y: 25%;
+    --33-x: 77%; /*pos5*/
+    --33-y: 25%;
+    --50-x: 77%; /*pos4*/
+    --50-y: 75%;
+    --66-x: 44%; /*pos3*/
+    --66-y: 75%;
+    --83-x: 10%;  /*pos2*/
+    --83-y:  75%;
+    --100-x: 10%; /*pos1*/
+    --100-y: 25%; 
+
+    animation-name: rotation;
+    animation-duration: var(--time-animation);
+    animation-iteration-count:infinite;
+    z-index: 1000;
+}
+
+
+#ply_2 {
+
+    --0-x: 10%;
+    --0-y: 75%;
+    --16-x: 10%; 
+    --16-y: 25%;
+    --33-x: 44%; 
+    --33-y: 25%;
+    --50-x: 77%; 
+    --50-y: 25%;
+    --66-x: 77%; 
+    --66-y: 75%;
+    --83-x: 44%;  
+    --83-y: 75%;
+    --100-x: 10%; 
+    --100-y: 75%; 
+
+    animation-name: rotation;
+    animation-duration: var(--time-animation);
+    animation-iteration-count: infinite;
+    z-index: 1000;
+}
+
+#ply_3 {
+
+    --0-x: 44%;
+    --0-y: 75%;
+    --16-x: 10%;
+    --16-y: 75%;
+    --33-x: 10%;
+    --33-y: 25%;
+    --50-x: 44%;
+    --50-y: 25%;
+    --66-x: 77%;
+    --66-y: 25%;
+    --83-x: 77%;
+    --83-y: 75%;
+    --100-x: 44%;
+    --100-y: 75%;
+
+    animation-name: rotation;
+    animation-duration: var(--time-animation);
+    animation-iteration-count: infinite;
+}
+
+#ply_4 {
+
+    --0-x: 77%;
+    --0-y: 75%;
+    --16-x: 44%;
+    --16-y: 75%;
+    --33-x: 10%;
+    --33-y: 75%;
+    --50-x: 10%;
+    --50-y: 25%;
+    --66-x: 44%;
+    --66-y: 25%;
+    --83-x: 77%;
+    --83-y: 25%;
+    --100-x: 77%;
+    --100-y: 75%;
+
+    animation-name: rotation;
+    animation-duration: var(--time-animation);
+    animation-iteration-count: infinite;
+}
+
+#ply_5 {
+
+    --0-x: 77%;
+    --0-y: 25%;
+    --16-x: 77%;
+    --16-y: 75%;
+    --33-x: 44%;
+    --33-y: 75%;
+    --50-x: 10%;
+    --50-y: 75%;
+    --66-x: 10%;
+    --66-y: 25%;
+    --83-x: 44%;
+    --83-y: 25%;
+    --100-x: 77%;
+    --100-y: 25%;
+
+    animation-name: rotation;
+    animation-duration: var(--time-animation);
+    animation-iteration-count: infinite;
+}
+
+#ply_6 {
+
+    --0-x: 44%;
+    --0-y: 25%;
+    --16-x: 77%;
+    --16-y: 25%;
+    --33-x: 77%;
+    --33-y: 75%;
+    --50-x: 44%;
+    --50-y: 75%;
+    --66-x: 10%;
+    --66-y: 75%;
+    --83-x: 10%;
+    --83-y: 25%;
+    --100-x: 44%;
+    --100-y: 25%;
+    animation-name: rotation;
+    animation-duration: var(--time-animation);
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes rotation {
+    0% {
+        right: var(--0-x);
+        bottom: var(--0-y);
+    }
+
+    16%{
+        right: var(--16-x);
+        bottom: var(--16-y);
+    }
+
+    33% {
+        right: var(--33-x);
+        bottom: var(--33-y);
+    }
+
+    50% {
+        right: var(--50-x);
+        bottom: var(--50-y);
+    }
+
+    66% {
+        right: var(--66-x);
+        bottom: var(--66-y);
+    }
+
+    83%{
+        right: var(--83-x);
+        bottom: var(--83-y);
+    }
+
+    100% {
+        right: var(--100-x);
+        bottom: var(--100-y); 
+    }
+}
