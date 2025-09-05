@@ -10,6 +10,7 @@ body,html {
     padding: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
+    /* overflow: hidden; */
 
 }
 
@@ -26,12 +27,15 @@ nav a:visited {
 
 header {
     background: #daff09;
+    /* position: fixed; */
+    z-index: 5;
 }
 
 div#logo {
     margin: 20px;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
     background: url(/img/logo.png) no-repeat;
     text-indent: -9999px;
     float: left;
@@ -143,4 +147,13 @@ footer {
     clear: both;
 
     text-align: center;
+}
+
+
+#roles p {
+    margin: -2px 0;
+}
+
+#plyr_func h3 {
+    margin: -2px 0;
 }
