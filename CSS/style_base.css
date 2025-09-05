@@ -11,6 +11,8 @@ body,html {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
 
+    scroll-behavior: smooth;
+
 }
 
 
@@ -136,8 +138,11 @@ footer {
     padding: 5px;
 }
 
-
-
+.icons{
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
 
 #copyright {
     clear: both;
