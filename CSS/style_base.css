@@ -3,17 +3,33 @@
 } */
 
 
-/**Formatações bases**/
+#animation{
+    color: red;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #0C294E;
+    line-height: 50px;
+}
 
+#animation span{
+    display: block;
+    background-color: black;
+    transition: 2s;
+}
+
+
+/**Formatações bases**/
 body,html {
     margin: 0;
     padding: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
-    /* overflow: hidden; */
+    background: #dddddd;
+
+    scroll-behavior: smooth; /*faz a transição da tela lenta ao invés de instantanea*/
 
 }
-
 
 a {
     text-decoration: none;
@@ -23,25 +39,27 @@ a {
 nav a:link,
 nav a:visited {
     color: #0C294E;
+    text-transform: uppercase;
 }
 
 header {
-    background: #daff09;
-    /* position: fixed; */
+    background: transparent;
+    position: fixed;
     z-index: 5;
 }
 
 div#logo {
     margin: 20px;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+    opacity: 0.5;
     background-size: cover;
     background: url(/img/logo.png) no-repeat;
     text-indent: -9999px;
     float: left;
 }
 
-nav ul {
+#navbar{
     list-style: none;
     float: right;
     margin: 1% 5%;
@@ -54,8 +72,9 @@ nav li {
 }
 
 .conteudo{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+
 }
 
 .fundos{
@@ -63,7 +82,8 @@ nav li {
     width: 100%;
     opacity: 0.8;
     position:relative;
-    
+    object-position: center;
+    z-index: 0;
 }
 
 .titulo_fundo{
@@ -81,6 +101,23 @@ nav li {
     padding: 10px;
     text-transform: uppercase;
     letter-spacing: 5px;
+}
+
+
+/*Criação do snap-scroll*/
+
+/*aqui é o Pai quem define o snap- scroll*/
+article{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /*isso permite a snap scroll na vertical*/
+}
+
+/*estes são os filhos que irão aparecer de um em um no snap-scroll*/
+section{
+    height: 100vh;
+    scroll-snap-align: start; /*aonde que alinha a snap*/
+    display: flex;
 }
 
 
@@ -126,18 +163,49 @@ footer {
 
 }
 
+.ft_block span{
+    text-transform: uppercase ;
+}
+
+.ft_block ul{
+    padding: 1em;
+}
+
 .ft_block {
     border: 1px solid;
-
+    color: black;
     float: left;
-    margin: 50px;
+    margin: 5%;
+    
+}
 
+.ft_block a{
+    color: black;
+    padding-left:10px;
+}
+
+.ft_block a:hover{
+    color: #ff1414;
 }
 
 .ft_block li {
-
+    display: flex;
+    align-items: center;
     list-style: none;
     padding: 5px;
+}
+
+#ft_notices input{
+    margin: 10px;
+}
+
+
+/*estilizar o campo selecionado*/
+#ft_notices input[type="text"]{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid#0C294E;
+
 }
 
 
@@ -149,11 +217,3 @@ footer {
     text-align: center;
 }
 
-
-#roles p {
-    margin: -2px 0;
-}
-
-#plyr_func h3 {
-    margin: -2px 0;
-}
