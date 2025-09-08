@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/CSS/style_base.css">
     <link rel="stylesheet" href="/CSS/animation.css">
     <link rel="stylesheet" href="/CSS/style_img.css">
+    <link rel="stylesheet" href="/CSS/quadra.css">
     <title>Mundo do Vôlei</title>
 </head>
 
@@ -219,8 +220,17 @@
                         </p>
                     </div>
 
-                    <h3>Resumo</h3>
-                    <!-- <p>
+                    
+                </div>
+
+
+            </section>
+
+            <section class="conteudo" id="roles">
+                <div class="fundos" id="back5">
+                    <div class="titulo_fundo"><span class="titulo">funções dos jogadores</span></div>
+                    
+                    <p>
                         Embora cada jogador tenha sua função específica dentro da equipe, todos podem realizar as
                         principais ações do jogo, como recepção, levantamento, defesa e ataque, desde que respeitem as
                         regras da posição em que estão. O vôlei é um esporte coletivo em que a colaboração entre as
@@ -232,7 +242,7 @@
                         organiza as jogadas, os atacantes (pontas, centrais e oposto) têm a missão de finalizar os
                         pontos, enquanto o líbero se especializa na defesa e recepção. Mesmo com essas funções
                         definidas, a integração entre os jogadores é o que garante a fluidez e a eficácia das jogadas.
-                    </p> -->
+                    </p>
 
                     <p>
                         Funções do Vôlei:
@@ -241,38 +251,54 @@
                     <table style="border: 1px solid;">
                         <tr>
                             <th>Função</th>
+                            <th>Posição na Quadra</th>
                             <th>Especialidade</th>
+                            <th>Características</th>
                         </tr>
-
                         <tr>
-                            <td>Levantador(L)</td>
-                            <td>Organiza e prepara o Ataque</td>
+                            <th>Levantador(L)</th>
+                            <td>Geralmente posição 2 ou 3</td>
+                            <td>Distribuir as jogadas, levantar a bola para os atacantes finalizarem o ponto</td>
+                            <td>Visão de jogo, rapidez de raciocínio, precisão nos toques</td>
                         </tr>
-
                         <tr>
-                            <td>Ponta(P)</td>
-                            <td>Versáteis na defesa e o ataque</td>
+                            <th>Ponta(P)</th>
+                            <td>Posições 4 e 6 (extremidades da rede)</td>
+                            <td>Atacar pelas extremidades, ajudar na recepção do saque adversário</td>
+                            <td>Versatilidade, bom domínio ofensivo e defensivo</td>
                         </tr>
-
                         <tr>
-                            <td>Central(C)</td>
-                            <td>Bons no Bloqueio e Ataque Rápido pelo Centro</td>
+                            <th>Central(C)</th>
+                            <td>Posição 3 (meio da quadra)</td>
+                            <td>Bloquear ataques adversários, realizar ataques rápidos pelo meio da quadra</td>
+                            <td>Excelente impulsão, leitura de jogo, velocidade</td>
                         </tr>
-
                         <tr>
-                            <td>Oposto(O)</td>
-                            <td>Principal Atacante especialista no ataque</td>
+                            <th>Oposto(Op)</th>
+                            <td>Lado oposto ao levantador, posição 2</td>
+                            <td>Pontuar na rede e do fundo, atacar com força</td>
+                            <td>Potência nos ataques, capacidade de pontuar</td>
                         </tr>
-
                         <tr>
-                            <td>Libero(Lb)</td>
-                            <td>Especialista na Defesa e Recepção. Não ataca nem saca</td>
+                            <th>Líbero(Li)</th>
+                            <td>Linha de trás (defesa)</td>
+                            <td>Especialista em recepção e defesa, manter a bola viva, substituir jogadores de ataque no fundo</td>
+                            <td>Agilidade, reflexos, boa leitura de jogo defensiva, uso de uniforme diferenciado para identificação</td>
                         </tr>
-
                     </table>
+
+                    <div id="quadra">
+                        <div id="linha"></div>
+                        <div class="player" id="ply_Op">Op</div>
+                        <div class="player" id="ply_C1">C</div>
+                        <div class="player" id="ply_P2">P2</div>
+
+                        <div class="player" id="ply_P1">P1</div>
+                        <div class="player" id="ply_Li">Li</div>
+                        <div class="player" id="ply_L">L</div>
+                    </div>
+                    
                 </div>
-
-
             </section>
 
             <!-- ***sobre o Brasil*** -->
@@ -307,7 +333,6 @@
             <section class="conteudo" id="final">
                 <div class="fundos" id="back7">
                     <div class="titulo_fundo"><span class="titulo">Chegamos ao Final</span></div>
-                    <h2>Chegamos ao Final</h2>
                     <p>
                         O voleibol é muito mais do que um esporte: é dedicação, trabalho em equipe e paixão pelo jogo.
                         Ao conhecer sua história, regras e principais jogadores, percebemos como cada ponto, cada saque
@@ -357,7 +382,6 @@
                     <div class="campo_ft" id="nome">
                         <input type="text" name="name" placeholder="Nome" required>
                     </div>
-                    <br>
                     <div class="campo_ft" id="email">
                         <input type="text" placeholder="E-mail" required>
                     </div>

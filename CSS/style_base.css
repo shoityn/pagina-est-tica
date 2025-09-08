@@ -1,21 +1,12 @@
-/* :root{
-    --primary: #fff;
-} */
+:root{
+    --primary: #003C9E;
+    --primary-light:#006F9E;
+    --primary-dark:#000B9E; 
+    --secondary:#9E7D00;
+    --secondary-two:#9E5500;
+    --dominant:#F2E1C4;
+    --gray:white;
 
-
-#animation{
-    color: red;
-    width: 100px;
-    height: 50px;
-    padding: 5px;
-    border: 1px solid #0C294E;
-    line-height: 50px;
-}
-
-#animation span{
-    display: block;
-    background-color: black;
-    transition: 2s;
 }
 
 
@@ -25,14 +16,35 @@ body,html {
     padding: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
-    background: #dddddd;
+    background: var(--gray);
 
     scroll-behavior: smooth; /*faz a transição da tela lenta ao invés de instantanea*/
 
 }
 
+div.titulo_fundo + p {
+  margin-top: 5%;
+}
+
+.conteudo > .fundos > *:not(.titulo_fundo) {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    margin-left: 10%;
+    margin-right: 10%;
+
+    background-color: rgba(0,0,0,0.3); /* leve camada escura */
+    backdrop-filter: blur(2px); /* desfoque do fundo */
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
 a {
     text-decoration: none;
+}
+
+li{
+    list-style: none;
 }
 
 
@@ -74,7 +86,6 @@ nav li {
 .conteudo{
     width: 100%;
     margin: 0 auto;
-
 }
 
 .fundos{
@@ -84,6 +95,8 @@ nav li {
     position:relative;
     object-position: center;
     z-index: 0;
+
+    
 }
 
 .titulo_fundo{
@@ -95,8 +108,9 @@ nav li {
 }
 
 .titulo_fundo span.titulo{
-    color: #0C294E;
-    background: #c2c2c2;
+    color: var(--primary);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background: var(--gray);
     font-size: 3.5em;
     padding: 10px;
     text-transform: uppercase;
@@ -122,37 +136,6 @@ section{
 
 
 
-/**estilização da quadra animada*/
-#quadra {
-    width: 300px;
-    height: 300px;
-    border: 2px solid black;
-    background: #F78C59;
-    position: relative;
-}
-
-#linha{
-    width: 300px;
-    height: 2px;
-    background: black;
-    margin-top: 100px;
-
-}
-
-.player {
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    /*define a altura da linha, importante para dimencionar/posicionar os texto*/
-    background: red;
-    border: 2px solid black;
-    border-radius: 100%;
-    position: absolute;
-}
-
-
-
 /**fotter**/
 
 footer {
@@ -164,7 +147,9 @@ footer {
 }
 
 .ft_block span{
-    text-transform: uppercase ;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--secondary);
 }
 
 .ft_block ul{
@@ -172,20 +157,20 @@ footer {
 }
 
 .ft_block {
-    border: 1px solid;
-    color: black;
+    /* border: 1px solid; */
+    color: var(--secondary-two);
     float: left;
     margin: 5%;
     
 }
 
 .ft_block a{
-    color: black;
+    color: var(--secondary);
     padding-left:10px;
 }
 
 .ft_block a:hover{
-    color: #ff1414;
+    color: var(--primary-dark);
 }
 
 .ft_block li {
@@ -195,25 +180,38 @@ footer {
     padding: 5px;
 }
 
+
+#nome{
+    margin-top: 20px;
+}
+
+
 #ft_notices input{
     margin: 10px;
+    font-size: 1em;
 }
+
+#ft_notices input::placeholder{
+    color: var(--primary);
+    font-size: 1em;
+}
+
 
 
 /*estilizar o campo selecionado*/
-#ft_notices input[type="text"]{
+
+.campo_ft input {
     background: transparent;
     border: none;
-    border-bottom: 2px solid#0C294E;
+    outline: none;
+    border-bottom: 2px solid var(--secondary);
 
 }
 
 
-
-
+/*parte final de direitos do footer*/
 #copyright {
     clear: both;
-
     text-align: center;
 }
 
