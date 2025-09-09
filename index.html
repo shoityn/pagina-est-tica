@@ -15,48 +15,33 @@
 
     <!-- ******  HEADER    ***** -->
     <header>
-        <!-- <div id="logo">
+        <div id="logo">
             <h1><a href="index.html" id="txt_logo">Mundo do Vôlei</a></h1>
-        </div> -->
-
-        <!-- *navegação* -->
-        <!-- <nav>
-            <ul id="navbar">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#history">História</a></li>
-                <li><a href="#rules">Regras</a></li>
-                <li><a href="#positions">Posições e Rotação</a></li>
-                <li><a href="#roles">Funções dos Jogadores</a></li>
-                <li><a href="#brazil">Sobre o Brasil</a></li>
-            </ul>
-        </nav> -->
-
-        <div style="clear: both;"></div>
-
+            <div style="clear: both;"></div>
+        </div>
     </header>
-
+    
     <!-- ******  MAIN   ***** -->
     <main>
-
+        
         <article>
             <!-- ***introdução*** -->
             <section class="conteudo" id="inicio">
-
+                
                 <div class="fundos" id="back1">
-                    <div class="titulo_fundo"><span class="titulo">bem-vindo ao mundo do Volei</span></div>
-                    
-                    <p>
-                        Este site foi criado com o objetivo de compartilhar conhecimentos, curiosidades e informações
-                        completas sobre um dos esportes mais emocionantes do mundo: o vôlei.
-                        Aqui, você vai aprender o básico sobre a história do esporte, suas regras, posições dos
-                        jogadores, grandes nomes que marcaram época, e muito mais.
-                    </p>
-                    <p>
-                        Se você é um fã apaixonado, estudante, atleta ou apenas curioso sobre como funciona o voleibol,
-                        este espaço é para você!
-                        Navegue pelos tópicos e descubra tudo sobre esse esporte que une técnica, trabalho em equipe e
-                        emoção.
-                    </p>
+                    <!-- *barra de navegação* -->
+                    <nav>
+                        <ul id="navbar">
+                            <li><a href="#inicio">Início</a></li>
+                            <li><a href="#history">História</a></li>
+                            <li><a href="#rules">Regras</a></li>
+                            <li><a href="#positions">Posições e Rotação</a></li>
+                            <li><a href="#roles">Funções dos Jogadores</a></li>
+                            <li><a href="#brazil">Sobre o Brasil</a></li>
+                        </ul>
+                    </nav>
+                    <div style="clear: both;"></div>
+                    <div class="titulo_fundo" id="tituloprincipal"><span class="titulo_principal">bem-vindo ao mundo do Vôlei</span></div>
                 </div>
 
             </section>
@@ -116,7 +101,8 @@
                         Algumas infrações comuns são: invasão da quadra adversária, toque na rede, mais de três toques
                         na bola e rotação incorreta dos jogadores.
                     </p>
-                    <a href="https://www2.fpv.com.br/wp-content/uploads/2025/02/Regras-Oficiais-Voleibol-2025_2028.pdf">Saiba mais</a>
+                    <br>
+                    <a id="search_more" href="https://www2.fpv.com.br/wp-content/uploads/2025/02/Regras-Oficiais-Voleibol-2025_2028.pdf">Saiba mais</a>
                 </div>
 
             </section>
@@ -140,13 +126,12 @@
                         principal (levantador, líbero, etc.), mas precisa respeitar a posição em que está no momento do
                         saque.
                     </p>
-                    <img src="/img/position.png" alt="">
-                    <br>
-                    <span>Fonte: <a
-                            href="https://educacaofisicanamente.blogspot.com/2012/05/taticas-basicas-do-voleibol.html">Educação
-                            Física na Mente</a></span>
+                    <div id="posicao_quadra">
+                        <img src="/img/position.png" id="position" alt="">
+                        <span id="fonteposition">Fonte: <a id="linkposition" href="https://educacaofisicanamente.blogspot.com/2012/05/taticas-basicas-do-voleibol.html">Educação Física na Mente</a></span>
+                    </div>
                     <!-- QUADRA DE ROTAÇÃO ANIMADA -->
-                    <div id="quadra">
+                    <div id="quadra1" class="quadra">
                         <div id="linha"></div>
                         <div class="player" id="ply_4">4</div>
                         <div class="player" id="ply_3">3</div>
@@ -171,10 +156,6 @@
                         específica, com responsabilidades bem definidas dentro da equipe. Essas funções são essenciais
                         para o equilíbrio tático e o desempenho técnico da equipe durante a partida.
                     </p>
-                    <p>
-                        Entender essas funções ajuda a acompanhar melhor as partidas e valorizar o trabalho em equipe.
-                    </p>
-
                     <p>
                         A seguir, você vai conhecer as principais funções dos jogadores no vôlei:
                     </p>
@@ -226,7 +207,7 @@
 
             </section>
 
-            <section class="conteudo" id="roles">
+            <section class="conteudo" id="roles2">
                 <div class="fundos" id="back5">
                     <div class="titulo_fundo"><span class="titulo">funções dos jogadores</span></div>
                     
@@ -287,7 +268,7 @@
                         </tr>
                     </table>
 
-                    <div id="quadra">
+                    <div id="quadra2" class="quadra">
                         <div id="linha"></div>
                         <div class="player" id="ply_Op">Op</div>
                         <div class="player" id="ply_C1">C</div>
@@ -321,7 +302,7 @@
                         mundial. Até Paris 2024, o país soma 26 medalhas olímpicas no voleibol, distribuídas em 9 ouros,
                         11 pratas e 6 bronzes. A distribuição por modalidade e gênero é a seguinte:
                     </p>
-                    <ul>
+                    <ul id="brasil_achivements">
                         <li>Vôlei de quadra — Masculino: 6 medalhas (3 ouros, 3 pratas).</li>
                         <li>Vôlei de quadra — Feminino: 6 medalhas (2 ouros, 1 prata, 3 bronzes).</li>
                         <li>Vôlei de praia — Masculino: 6 medalhas (2 ouros, 3 pratas, 1 bronze).</li>
@@ -386,7 +367,7 @@
                         <input type="text" placeholder="E-mail" required>
                     </div>
 
-                    <input type="submit" value="Inscrever-se">
+                    <input type="submit" id="submit" value="Inscrever-se">
                 </div>
             </form>
 

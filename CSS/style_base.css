@@ -6,39 +6,25 @@
     --secondary-two:#9E5500;
     --dominant:#F2E1C4;
     --gray:white;
-
+    --black: #000;
+    
 }
-
 
 /**Formatações bases**/
 body,html {
-    margin: 0;
-    padding: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--gray);
 
     scroll-behavior: smooth; /*faz a transição da tela lenta ao invés de instantanea*/
 
 }
 
-div.titulo_fundo + p {
-  margin-top: 5%;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
-.conteudo > .fundos > *:not(.titulo_fundo) {
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    margin-left: 10%;
-    margin-right: 10%;
-
-    background-color: rgba(0,0,0,0.3); /* leve camada escura */
-    backdrop-filter: blur(2px); /* desfoque do fundo */
-    padding: 10px;
-    border-radius: 8px;
-
-}
-
 a {
     text-decoration: none;
 }
@@ -47,28 +33,39 @@ li{
     list-style: none;
 }
 
+/*Criação do snap-scroll*/
 
-nav a:link,
-nav a:visited {
-    color: #0C294E;
-    text-transform: uppercase;
+/*aqui é o Pai quem define o snap- scroll*/
+article{
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory; /*isso permite a snap scroll na vertical*/
 }
 
+/*estes são os filhos que irão aparecer de um em um no snap-scroll*/
+section{
+    height: 100vh;
+    scroll-snap-align: start; /*aonde que alinha a snap*/
+    display: flex;
+}
+
+/*estilização da nav bar*/
 header {
     background: transparent;
-    position: fixed;
     z-index: 5;
 }
 
 div#logo {
-    margin: 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
     width: 120px;
     height: 120px;
-    opacity: 0.5;
+    opacity: 0.8;
     background-size: cover;
     background: url(/img/logo.png) no-repeat;
     text-indent: -9999px;
-    float: left;
+    z-index: 10;
 }
 
 #navbar{
@@ -77,10 +74,62 @@ div#logo {
     margin: 1% 5%;
 }
 
+nav a:link,
+nav a:visited {
+    color: #0C294E;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 10px;
+     border-radius: 20px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+nav a:hover{
+    color: var(--gray);
+    background-color: var(--primary-light);
+    border-radius: 20px;
+}
+
+nav a:active{
+    color: var(--primary-dark);
+}
+
 nav li {
     float: left;
     padding: 10px;
-    border: 1px solid #0C294E;
+    /* border: 1px solid #0C294E; */
+    /* border-radius: 30%; */
+}
+
+
+/**Estilização da página principal**/
+div.titulo_fundo + p {
+  margin-top: 5%;
+}
+
+/* tudo que não seja o titulo tem um margin lateral */
+.conteudo > .fundos >*:not(.titulo_fundo){
+    margin-left: 10%;
+    margin-right: 10%;
+
+} 
+
+h3{
+    color: var(--primary-light);
+    backdrop-filter: blur(2px);
+    font-size: 2em;
+}
+
+.fundos > p,
+#plyr_func > p,
+#brasil_achivements > li{
+color: white;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+background-color: rgba(0,0,0,0.3);
+backdrop-filter: blur(2px);
+padding: 5px;
+margin-top: 7px;
+border-radius: 8px;
 }
 
 .conteudo{
@@ -95,16 +144,30 @@ nav li {
     position:relative;
     object-position: center;
     z-index: 0;
-
     
 }
 
 .titulo_fundo{
-    position: absolute;
     top: 5%;
     width: 100%;
     text-align: center;
     position: sticky;
+    z-index: 11;
+}
+
+/* posicionamento do titulo principal */
+#tituloprincipal{
+    margin-top: 15%;
+}
+
+/* estilização do titulo principal */
+span.titulo_principal{
+    color: var(--primary-dark);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 5em;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .titulo_fundo span.titulo{
@@ -114,35 +177,60 @@ nav li {
     font-size: 3.5em;
     padding: 10px;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
 }
 
-
-/*Criação do snap-scroll*/
-
-/*aqui é o Pai quem define o snap- scroll*/
-article{
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory; /*isso permite a snap scroll na vertical*/
+#posicao_quadra{
+    display: inline-block;
+    margin-left: 30%;
 }
 
-/*estes são os filhos que irão aparecer de um em um no snap-scroll*/
-section{
-    height: 100vh;
-    scroll-snap-align: start; /*aonde que alinha a snap*/
-    display: flex;
+#quadra1{
+    float: right;
+    margin-right: 20%;
+    margin-top: 50px;
 }
 
+#position{
+    margin-top:80px;
+}
+
+#linkposition, #fonteposition{
+    color: var(--gray);
+}
+
+#fonteposition{
+    display: block;
+}
+
+#linkposition:hover{
+    color: var(--secondary-two);
+}
+
+#search_more{
+    padding: 10px;
+    margin-bottom: 100px;
+    background: #ffffff;
+
+    border-radius: 15px;
+    color: var(--secondary-two);
+}
+
+#search_more:hover{
+    background: var(--secondary);
+    color: var(--gray);
+}
 
 
 /**fotter**/
 
 footer {
-    border: 1px solid;
-
-    width: 80%;
+    background: var(--dominant);
+    color: var(--secondary-two);
+    width: 100%;
     margin: 0 auto;
+
+    border-top: 1px solid black;
 
 }
 
@@ -150,14 +238,15 @@ footer {
     text-transform: uppercase;
     font-size: 1.5em;
     border-bottom: 2px solid var(--secondary);
+    color: var(--secondary-two);
 }
 
 .ft_block ul{
     padding: 1em;
+   
 }
 
 .ft_block {
-    /* border: 1px solid; */
     color: var(--secondary-two);
     float: left;
     margin: 5%;
@@ -167,6 +256,7 @@ footer {
 .ft_block a{
     color: var(--secondary);
     padding-left:10px;
+    transition: color 0.2s ease;
 }
 
 .ft_block a:hover{
@@ -185,29 +275,44 @@ footer {
     margin-top: 20px;
 }
 
-
 #ft_notices input{
     margin: 10px;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 #ft_notices input::placeholder{
-    color: var(--primary);
+    color: var(--secondary);
     font-size: 1em;
 }
 
-
-
 /*estilizar o campo selecionado*/
-
 .campo_ft input {
     background: transparent;
     border: none;
     outline: none;
     border-bottom: 2px solid var(--secondary);
+    color: var(--primary);
+}
+
+/*estilizando botão submit(inscrever-se)*/
+input[type="submit"]{
+    border: 2px solid var(--secondary);
+    background: var(--dominant);
+    color: var(--secondary-two);
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 10px;
+    transition: color 0.2s ease;
 
 }
 
+input[type="submit"]:hover{
+    border: 2px solid var(--secondary-two);
+    background: var(--);
+    color: var(--primary);
+    padding: 5px;
+    border-radius: 10px;
+}
 
 /*parte final de direitos do footer*/
 #copyright {
