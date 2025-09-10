@@ -1,6 +1,6 @@
 :root{
     --primary: #003C9E;
-    --primary-light:#006F9E;
+    --primary-light:#00b0cf;
     --primary-dark:#000B9E; 
     --secondary:#9E7D00;
     --secondary-two:#9E5500;
@@ -11,10 +11,12 @@
 }
 
 /**Formatações bases**/
-body,html {
+body{
     height: 100%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--gray);
+    max-width: 1920px;
+
 
     scroll-behavior: smooth; /*faz a transição da tela lenta ao invés de instantanea*/
 
@@ -57,8 +59,8 @@ header {
 
 div#logo {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
     width: 120px;
     height: 120px;
     opacity: 0.8;
@@ -80,7 +82,7 @@ nav a:visited {
     background-color: transparent;
     text-transform: uppercase;
     padding: 10px;
-     border-radius: 20px;
+    border-radius: 20px;
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -120,6 +122,11 @@ h3{
     font-size: 2em;
 }
 
+h3#titulobrasil{
+    color: var(--gray);
+}
+
+/*seleciona os ps e os li*/
 .fundos > p,
 #plyr_func > p,
 #brasil_achivements > li{
@@ -144,11 +151,10 @@ border-radius: 8px;
     position:relative;
     object-position: center;
     z-index: 0;
-    
 }
 
 .titulo_fundo{
-    top: 5%;
+    top: 3%;
     width: 100%;
     text-align: center;
     position: sticky;
@@ -157,13 +163,12 @@ border-radius: 8px;
 
 /* posicionamento do titulo principal */
 #tituloprincipal{
-    margin-top: 15%;
+    margin-top: 12%;
 }
 
 /* estilização do titulo principal */
 span.titulo_principal{
     color: var(--primary-dark);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     font-size: 5em;
     padding: 10px;
     text-transform: uppercase;
@@ -171,7 +176,7 @@ span.titulo_principal{
 }
 
 .titulo_fundo span.titulo{
-    color: var(--primary);
+    color: var(--primary-dark);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     background: var(--gray);
     font-size: 3.5em;
@@ -180,20 +185,57 @@ span.titulo_principal{
     letter-spacing: 1px;
 }
 
+#pfinal{
+    margin-top: 10%;
+    font-size: 1.5em;
+}
+
+#wiki{
+    color: var(--gray);
+    /* float: left; */
+}
+
+#wikiref{
+    color: var(--gray);
+}
+
+#wikiref:hover{
+    color: #9E7D00;
+    text-decoration:underline;
+}
+
+#search_more{
+    padding: 10px;
+    margin-bottom: 100px;
+    background: #ffffff;
+    transition: color ease 0.2s;
+    border-radius: 15px;
+    color: var(--secondary-two);
+}
+
+#search_more:hover{
+    background: var(--secondary);
+    color: var(--gray);
+}
+
 #posicao_quadra{
-    display: inline-block;
-    margin-left: 30%;
+    margin-left: 25%;
+    float:left;
+    margin-right: 5%;
+}
+#position{
+    width: 300px;
+    height: auto;
+    margin-top:80px;
 }
 
 #quadra1{
-    float: right;
-    margin-right: 20%;
+    float: left;
     margin-top: 50px;
+    margin-left: auto;
+    /* margin-right: auto; */
 }
 
-#position{
-    margin-top:80px;
-}
 
 #linkposition, #fonteposition{
     color: var(--gray);
@@ -204,23 +246,71 @@ span.titulo_principal{
 }
 
 #linkposition:hover{
-    color: var(--secondary-two);
+    color: var(--secondary);
+    text-decoration: underline;
 }
 
-#search_more{
-    padding: 10px;
-    margin-bottom: 100px;
-    background: #ffffff;
-
-    border-radius: 15px;
-    color: var(--secondary-two);
+.gif{
+    width: 300px;
+    bottom: 300px;
+    border: 2px solid var(--secondary);
+    float: left;
+    position: relative;
+    margin: 10px;
+    z-index: 11;
+    scale: 0.3;
+    visibility: hidden;
 }
 
-#search_more:hover{
-    background: var(--secondary);
+#plyr_func{
+
+    position: absolute;
+}
+
+
+
+
+/*Estilização das tabelas*/
+
+#table_func{
+    background: var(--dominant);
+    margin-top:15px;
+    margin-bottom:15px;    
+}
+
+table#table_func{
+    border: 3px double var(--black);
+}
+
+#table_func td, #table_func th {
+    padding: 2px;
+    text-align: center;
+}
+
+#table_func td:hover, #table_func th:hover {
+    padding: 2px;
+    text-align: center;
+}
+
+#table_func tr:hover{
+    background:#ecd8b4 ;
+}
+
+#brasil_achivements{
+    background-color: var(--black);
+    margin-top: 15px;
     color: var(--gray);
 }
 
+table#brasil_achivements {
+    border: 4px outset var(--gray);
+}
+
+#brasil_achivements td, #brasil_achivements th{
+    padding: 10px;
+    text-align: center;
+
+}
 
 /**fotter**/
 
@@ -291,7 +381,7 @@ footer {
     border: none;
     outline: none;
     border-bottom: 2px solid var(--secondary);
-    color: var(--primary);
+    color: var(--secondary-two);
 }
 
 /*estilizando botão submit(inscrever-se)*/
@@ -308,7 +398,7 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     border: 2px solid var(--secondary-two);
-    background: var(--);
+    background: var(--dominant);
     color: var(--primary);
     padding: 5px;
     border-radius: 10px;

@@ -199,6 +199,15 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes btnhover {
-    
+@keyframes func_hover {
+    from{
+        transform: scale(0.3);
+        visibility: hidden;
+    }
+    to{
+        transform: scale(1);
+        visibility: visible;
+    }
+
+
 }
