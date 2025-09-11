@@ -199,15 +199,26 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes func_hover {
+@keyframes appear_gif {
     from{
         transform: scale(0.3);
+        opacity: 0;
         visibility: hidden;
     }
     to{
         transform: scale(1);
+        opacity: 1;
         visibility: visible;
     }
 
 
+}
+
+#s:hover ~ .set-group .gif,
+#ws:hover ~ .ws-group .gif,
+#mb:hover ~ .mb-group .gif,
+#op:hover ~ .op-group .gif,
+#li:hover ~ .li-group .gif
+{
+    animation: appear_gif 0.5s ease forwards;
 }

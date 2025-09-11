@@ -72,6 +72,7 @@ div#logo {
 
 #navbar{
     list-style: none;
+    position: fixed;
     float: right;
     margin: 1% 5%;
 }
@@ -250,25 +251,42 @@ span.titulo_principal{
     text-decoration: underline;
 }
 
+
+/*estilização dos gifs de funções*/
 .gif{
     width: 300px;
-    bottom: 300px;
     border: 2px solid var(--secondary);
-    float: left;
-    position: relative;
+    float:left;
     margin: 10px;
     z-index: 11;
-    scale: 0.3;
     visibility: hidden;
+    opacity: 0;
 }
+
+.imagens_func{
+    position: absolute;
+    top:100%;
+}
+
+.set-group,
+.ws-group,
+.mb-group,
+.op-group,
+.li-group{
+    display: flex;
+    /*flex para se organizarem*/
+}
+
+.hover_func:hover{
+    background: rgba(255, 255, 255,0.5);
+
+}
+
 
 #plyr_func{
 
     position: absolute;
 }
-
-
-
 
 /*Estilização das tabelas*/
 
