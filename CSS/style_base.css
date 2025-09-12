@@ -5,7 +5,7 @@
     --secondary:#9E7D00;
     --secondary-two:#9E5500;
     --dominant:#F2E1C4;
-    --gray:white;
+    --white:white;
     --black: #000;
     
 }
@@ -14,11 +14,8 @@
 body{
     height: 100%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--gray);
+    background: var(--white);
     max-width: 1920px;
-
-
-    scroll-behavior: smooth; /*faz a transição da tela lenta ao invés de instantanea*/
 
 }
 
@@ -26,6 +23,8 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth; /*faz a transição da tela lenta ao invés de instantanea*/
+
 }
 a {
     text-decoration: none;
@@ -38,7 +37,7 @@ li{
 /*Criação do snap-scroll*/
 
 /*aqui é o Pai quem define o snap- scroll*/
-article{
+html{
     height: 100vh;
     overflow-y: auto;
     scroll-snap-type: y mandatory; /*isso permite a snap scroll na vertical*/
@@ -48,7 +47,6 @@ article{
 section{
     height: 100vh;
     scroll-snap-align: start; /*aonde que alinha a snap*/
-    display: flex;
 }
 
 /*estilização da nav bar*/
@@ -65,15 +63,17 @@ div#logo {
     height: 120px;
     opacity: 0.8;
     background-size: cover;
-    background: url(/img/logo.png) no-repeat;
+    background: url(img/logo.png) no-repeat;
     text-indent: -9999px;
     z-index: 10;
 }
 
 #navbar{
     list-style: none;
-    position: fixed;
-    float: right;
+    position:fixed;
+    top: 0;
+    left: 0;
+    float: left;
     margin: 1% 5%;
 }
 
@@ -88,7 +88,7 @@ nav a:visited {
 }
 
 nav a:hover{
-    color: var(--gray);
+    color: var(--white);
     background-color: var(--primary-light);
     border-radius: 20px;
 }
@@ -107,7 +107,7 @@ nav li {
 
 /**Estilização da página principal**/
 div.titulo_fundo + p {
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 /* tudo que não seja o titulo tem um margin lateral */
@@ -124,13 +124,14 @@ h3{
 }
 
 h3#titulobrasil{
-    color: var(--gray);
+    color: var(--white);
 }
 
 /*seleciona os ps e os li*/
 .fundos > p,
 #plyr_func > p,
-#brasil_achivements > li{
+#brasil_achivements > li,
+p{
 color: white;
 text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 background-color: rgba(0,0,0,0.3);
@@ -138,6 +139,7 @@ backdrop-filter: blur(2px);
 padding: 5px;
 margin-top: 7px;
 border-radius: 8px;
+cursor:default;
 }
 
 .conteudo{
@@ -179,7 +181,7 @@ span.titulo_principal{
 .titulo_fundo span.titulo{
     color: var(--primary-dark);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    background: var(--gray);
+    background: var(--white);
     font-size: 3.5em;
     padding: 10px;
     text-transform: uppercase;
@@ -192,12 +194,12 @@ span.titulo_principal{
 }
 
 #wiki{
-    color: var(--gray);
+    color: var(--white);
     /* float: left; */
 }
 
 #wikiref{
-    color: var(--gray);
+    color: var(--white);
 }
 
 #wikiref:hover{
@@ -216,7 +218,7 @@ span.titulo_principal{
 
 #search_more:hover{
     background: var(--secondary);
-    color: var(--gray);
+    color: var(--white);
 }
 
 #posicao_quadra{
@@ -239,7 +241,7 @@ span.titulo_principal{
 
 
 #linkposition, #fonteposition{
-    color: var(--gray);
+    color: var(--white);
 }
 
 #fonteposition{
@@ -277,8 +279,9 @@ span.titulo_principal{
     /*flex para se organizarem*/
 }
 
-.hover_func:hover{
-    background: rgba(255, 255, 255,0.5);
+.hover_func:hover h3{
+    color: var(--primary);
+    cursor: default;
 
 }
 
@@ -317,11 +320,11 @@ table#table_func{
 #brasil_achivements{
     background-color: var(--black);
     margin-top: 15px;
-    color: var(--gray);
+    color: var(--white);
 }
 
 table#brasil_achivements {
-    border: 4px outset var(--gray);
+    border: 4px outset var(--white);
 }
 
 #brasil_achivements td, #brasil_achivements th{
