@@ -63,9 +63,14 @@ div#logo {
     height: 120px;
     opacity: 0.8;
     background-size: cover;
-    background: url(/..img/logo.png) no-repeat;
+    /* background: url(../img/logo.png) no-repeat; */
     text-indent: -9999px;
     z-index: 10;
+}
+
+#menusvg, #closesvg{
+    fill: black;
+    background-color: #000;
 }
 
 #navbar{
@@ -76,6 +81,7 @@ div#logo {
     float: left;
     margin: 1% 5%;
 }
+
 
 nav a:link,
 nav a:visited {
@@ -205,6 +211,10 @@ span.titulo_principal{
 #wikiref:hover{
     color: #9E7D00;
     text-decoration:underline;
+}
+
+#creator{
+    width: 250px;
 }
 
 #search_more{
