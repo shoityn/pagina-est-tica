@@ -15,8 +15,9 @@ body{
     height: 100%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--white);
+    min-width: 400px;
     max-width: 1920px;
-
+     cursor: url("img/bola.png"), auto;
 }
 
 *{
@@ -36,41 +37,23 @@ li{
 
 /*Criação do snap-scroll*/
 
-/*aqui é o Pai quem define o snap- scroll*/
+/*aqui é o Pai(container) quem define o snap- scroll*/
 html{
     height: 100vh;
     overflow-y: auto;
     scroll-snap-type: y mandatory; /*isso permite a snap scroll na vertical*/
 }
 
-/*estes são os filhos que irão aparecer de um em um no snap-scroll*/
+/*são os filhos(intens/telas) que irão aparecer na snap-scroll*/
 section{
     height: 100vh;
-    scroll-snap-align: start; /*aonde que alinha a snap*/
+    scroll-snap-align: end; /*aonde que alinha a snap*/
 }
 
 /*estilização da nav bar*/
 header {
     background: transparent;
     z-index: 5;
-}
-
-div#logo {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    width: 120px;
-    height: 120px;
-    opacity: 0.8;
-    background-size: cover;
-    /* background: url(../img/logo.png) no-repeat; */
-    text-indent: -9999px;
-    z-index: 10;
-}
-
-#menusvg, #closesvg{
-    fill: black;
-    background-color: #000;
 }
 
 #navbar{
@@ -82,21 +65,34 @@ div#logo {
     margin: 1% 5%;
 }
 
+nav{
+    background: var(--black);
+    display: flex;
+    justify-content: flex-start;
+    
+    /* margin: auto; */
+}
 
-nav a:link,
-nav a:visited {
-    color: #0C294E;
+
+nav a{
+    height: 100%;
+    display: flex;
+    text-align: center;
     background-color: transparent;
     text-transform: uppercase;
     padding: 10px;
     border-radius: 20px;
-    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+
+nav a:link,
+nav a:visited {
+    color: var(--black);
+    transition:background-color 0.2s ease;
 }
 
 nav a:hover{
-    color: var(--white);
-    background-color: var(--primary-light);
-    border-radius: 20px;
+    background-color: var(--primary-light)
 }
 
 nav a:active{
@@ -106,8 +102,6 @@ nav a:active{
 nav li {
     float: left;
     padding: 10px;
-    /* border: 1px solid #0C294E; */
-    /* border-radius: 30%; */
 }
 
 
@@ -117,7 +111,8 @@ div.titulo_fundo + p {
 }
 
 /* tudo que não seja o titulo tem um margin lateral */
-.conteudo > .fundos >*:not(.titulo_fundo){
+.conteudo > .fundos >*:not(nav):not(.titulo_fundo)
+{
     margin-left: 10%;
     margin-right: 10%;
 
@@ -266,7 +261,7 @@ span.titulo_principal{
 
 /*estilização dos gifs de funções*/
 .gif{
-    width: 300px;
+    width: 280px;
     border: 2px solid var(--secondary);
     float:left;
     margin: 10px;
@@ -350,9 +345,12 @@ footer {
     color: var(--secondary-two);
     width: 100%;
     margin: 0 auto;
+}
 
-    border-top: 1px solid black;
-
+#wrap_last{
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .ft_block span{
