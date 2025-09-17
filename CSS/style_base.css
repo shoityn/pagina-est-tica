@@ -17,13 +17,12 @@ body{
     background: var(--white);
     min-width: 400px;
     max-width: 1920px;
-     cursor: url("img/bola.png"), auto;
 }
 
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth; /*faz a transição da tela lenta ao invés de instantanea*/
 
 }
@@ -56,6 +55,19 @@ header {
     z-index: 5;
 }
 
+
+
+#sidemenu{
+    height: 100%;
+    width: 180px;
+    position: absolute;
+    background: var(--secondary-two);
+    transition: 0.5s ease;
+    transform: translateX(-200px);
+}
+/* colocar aqui a estilização da lista */
+
+
 #navbar{
     list-style: none;
     position:fixed;
@@ -65,53 +77,100 @@ header {
     margin: 1% 5%;
 }
 
-nav{
-    background: var(--black);
-    display: flex;
-    justify-content: flex-start;
+#logo {
+    position: fixed;
+    top: 10px;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    z-index: 10;
+}
+
+input[type="checkbox"]{
+    display: none;
+    visibility: hidden;
+    appearance: none;
+}
+
+
+/* estilização do ícone de menu */
+#icon_menu{
+    position:fixed;
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    left: 15px;
+    background: var(--secondary);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    cursor: pointer;
+    z-index: 20;
+}
+
+.line{
+    position:absolute;
+    height: 3px;
+    width: 20px;
+    background: var(--primary);
+    border-radius: 20%;
+    transition: all 0.3s ease;
+    left: 20%;
+    /* transform: translateX(-50%); */
+}
+
+#topline{
+    top: 6px;
+}
+
+#middleline{
+    top:13px;
+}
+
+#bottomline{
+    top: 20px;
+}
+
+/* tranformação e movimentação do menu */
+input:checked ~ #sidemenu{
+    transform: translateX(0);
+    box-shadow: 0 0 150px rbga(0,0,0,0.5);
     
-    /* margin: auto; */
+}
+nav{
+    /* background: var(--black); */
+    position:fixed;
+    z-index: 100;
 }
 
+/* https://www.youtube.com/watch?v=1TZjgQ0Osic */
 
-nav a{
-    height: 100%;
+#sidemenu ul li a img{
+    width: 40px;
+}
+
+#sidemenu li a{
+    color: var(--white);
+    padding: 10px;
     display: flex;
-    text-align: center;
-    background-color: transparent;
-    text-transform: uppercase;
-    padding: 10px;
-    border-radius: 20px;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+    transition: 0.2s ease-out;
 }
 
-
-nav a:link,
-nav a:visited {
-    color: var(--black);
-    transition:background-color 0.2s ease;
+#sidemenu li a:hover{
+    color: var(--white);
+    background: var(--primary-light);
 }
-
-nav a:hover{
-    background-color: var(--primary-light)
-}
-
-nav a:active{
-    color: var(--primary-dark);
-}
-
-nav li {
-    float: left;
-    padding: 10px;
-}
-
 
 /**Estilização da página principal**/
 div.titulo_fundo + p {
   margin-top: 3%;
 }
 
-/* tudo que não seja o titulo tem um margin lateral */
-.conteudo > .fundos >*:not(nav):not(.titulo_fundo)
+/* tudo que não seja o titulo,navbar ou rodapé tem um margin lateral */
+.conteudo > .fundos >*:not(nav):not(.titulo_fundo):not(footer)
 {
     margin-left: 10%;
     margin-right: 10%;
@@ -129,8 +188,6 @@ h3#titulobrasil{
 }
 
 /*seleciona os ps e os li*/
-.fundos > p,
-#plyr_func > p,
 #brasil_achivements > li,
 p{
 color: white;
@@ -196,7 +253,6 @@ span.titulo_principal{
 
 #wiki{
     color: var(--white);
-    /* float: left; */
 }
 
 #wikiref{
@@ -313,11 +369,6 @@ table#table_func{
     text-align: center;
 }
 
-#table_func td:hover, #table_func th:hover {
-    padding: 2px;
-    text-align: center;
-}
-
 #table_func tr:hover{
     background:#ecd8b4 ;
 }
@@ -340,17 +391,22 @@ table#brasil_achivements {
 
 /**fotter**/
 
+
+
+
 footer {
+    position: absolute;
     background: var(--dominant);
     color: var(--secondary-two);
     width: 100%;
     margin: 0 auto;
+    bottom: 0; 
 }
 
 #wrap_last{
     height: 100vh;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:end;
 }
 
 .ft_block span{
@@ -435,6 +491,9 @@ input[type="submit"]:hover{
 
 /*parte final de direitos do footer*/
 #copyright {
+    color: var(--black);
+    background: none;
+    text-shadow: none;
     clear: both;
     text-align: center;
 }

@@ -2,7 +2,7 @@
 
 @media(max-width:1100px) {
 
-    .conteudo>.fundos>*:not(.titulo_fundo) {
+    .conteudo > .fundos >*:not(nav):not(.titulo_fundo):not(footer) {
         margin-left: 5%;
         margin-right: 5%;
     }

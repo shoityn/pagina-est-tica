@@ -18,10 +18,7 @@
     <!-- ******  HEADER    ***** -->
 
     <header>
-        <div id="logo">
-            <h1><a href="index.html" id="txt_logo">Mundo do Vôlei</a></h1>
-            <div style="clear: both;"></div>
-        </div>
+
     </header>
 
     <!-- ******  MAIN   ***** -->
@@ -32,7 +29,33 @@
             <section class="conteudo" id="inicio">
 
                 <div class="fundos" id="back1">
-                    <!-- *barra de navegação* -->
+                <nav>
+                    <input type="checkbox" id="menu_btn">
+                    
+                    <label for="menu_btn">
+                        <div id="icon_menu">
+                            <span class="line" id="topline"></span>
+                            <span class="line" id="middleline"></span>
+                            <span class="line" id="bottomline"></span>
+                        </div>
+                    </label>
+                    
+                    <div id="sidemenu">
+                        <img src="img/logo.png" id="" alt="">
+                        <ul id="navbar">
+                            <li><a class="home-link" href="#inicio"><img src="img/home.png" alt=""> Início</a></li>
+                            <li><a href="#history"><img src="img/history.png" alt=""> História</a></li>
+                            <li><a href="#rules"><img src="img/rules.png" alt=""> Regras</a></li>
+                            <li><a href="#positions"><img src="/img/rotation.png" alt=""> Posições e Rotação</a></li>
+                            <li><a href="#roles"><img src="img/roles.png" alt=""> Funções dos Jogadores</a></li>
+                            <li><a href="#brazil"><img src="img/brasil.png" alt=""> Sobre o Brasil</a></li>
+                        </ul>
+                    </div>            
+                </nav>
+
+
+<!--                     
+                    *barra de navegação*
                     <nav>
                         <ul id="navbar">
                             <li><a class="home-link" href="#inicio">Início</a></li>
@@ -43,7 +66,7 @@
                             <li><a href="#brazil">Sobre o Brasil</a></li>
                         </ul>
                     </nav>
-                    <div style="clear: both;"></div>
+                    <div style="clear: both;"></div> -->
                     <div class="titulo_fundo" id="tituloprincipal"><span class="titulo_principal">bem-vindo ao mundo do
                             Vôlei</span></div>
                 </div>
@@ -398,10 +421,8 @@
         </article>
 
     </main>
-
     <!-- ******  FOOTER   ***** -->
     <div id="wrap_last">
-
         <section class="conteudo" id="final">
             <div class="fundos" id="back7">
                 <div class="titulo_fundo"><span class="titulo_principal">Chegamos ao Final</span></div>
@@ -413,51 +434,52 @@
                     sirva como um convite para que mais pessoas se inspirem no vôlei, apreciem
                     suas lendas e continuem celebrando a alegria desse esporte tão vibrante.
                 </p>
+
+                <footer>
+                    <!-- *Contato* -->
+                    <div id="ft_contact" class="ft_block">
+                        <span>Contatos</span>
+                        <ul id="contatos">
+                            <li><img class="icons" src="img/telephone.png" alt=""><a href="">(44)98451-1399</a></li>
+                            <li><img class="icons" src="img/email.png" alt=""><a href="">glaubershoity@gmail.com</a>
+                            </li>
+                            <li><img class="icons" src="img/instagram.png" alt=""><a href="">@mundovolei</a></li>
+                            <li><img class="icons" src="img/facebook.png" alt=""><a href="">@mundovolei</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="ft_help" class="ft_block">
+                        <span>Ajuda</span>
+                        <ul>
+                            <li><img src="img/faq.png" alt="" class="icons"><a href="">FAQ</a></li>
+                            <li><img src="img/suport.png" alt="" class="icons"><a href="">Suporte</a></li>
+                            <li><img src="img/terms.png" alt="" class="icons"><a href="">Termos e Condições</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="ft_notices" class="ft_block">
+                        <span>Receba notícias:</span>
+                        <form action="">
+                            <div id="campos">
+                                <div class="campo_ft" id="nome">
+                                    <input type="text" name="name" placeholder="Nome" required>
+                                </div>
+                                <div class="campo_ft" id="email">
+                                    <input type="text" placeholder="E-mail" required>
+                                </div>
+                                <input type="submit" id="submit" value="Inscrever-se">
+                            </div>
+                        </form>
+                    </div>
+
+                    <p id="copyright">&copy; 2025 Glauber Shoity - Todos os direitos Reservados</p>
+                </footer>
             </div>
         </section>
 
-        <footer>
-            <!-- *Contato* -->
-            <div id="ft_contact" class="ft_block">
-                <span>Contatos</span>
-                <ul id="contatos">
-                    <li><img class="icons" src="img/telephone.png" alt=""><a href="">(44)98451-1399</a></li>
-                    <li><img class="icons" src="img/email.png" alt=""><a href="">glaubershoity@gmail.com</a></li>
-                    <li><img class="icons" src="img/instagram.png" alt=""><a href="">@mundovolei</a></li>
-                    <li><img class="icons" src="img/facebook.png" alt=""><a href="">@mundovolei</a></li>
-                </ul>
-            </div>
 
-            <div id="ft_help" class="ft_block">
-                <span>Ajuda</span>
-                <ul>
-                    <li><img src="img/faq.png" alt="" class="icons"><a href="">FAQ</a></li>
-                    <li><img src="img/suport.png" alt="" class="icons"><a href="">Suporte</a></li>
-                    <li><img src="img/terms.png" alt="" class="icons"><a href="">Termos e Condições</a></li>
-                </ul>
-            </div>
-
-            <div id="ft_notices" class="ft_block">
-                <span>Receba notícias:</span>
-                <form action="">
-                    <div id="campos">
-                        <div class="campo_ft" id="nome">
-                            <input type="text" name="name" placeholder="Nome" required>
-                        </div>
-                        <div class="campo_ft" id="email">
-                            <input type="text" placeholder="E-mail" required>
-                        </div>
-                        <input type="submit" id="submit" value="Inscrever-se">
-                    </div>
-                </form>
-            </div>
-
-            <p id="copyright">&copy; 2025 Glauber Shoity - Todos os direitos Reservados</p>
-        </footer>
 
     </div>
-
-
 
 </body>
 
