@@ -7,7 +7,6 @@
     --dominant:#F2E1C4;
     --white:white;
     --black: #000;
-    
 }
 
 /**Formatações bases**/
@@ -23,7 +22,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth; /*faz a transição da tela lenta ao invés de instantanea*/
+    scroll-behavior: smooth;
 
 }
 a {
@@ -40,13 +39,14 @@ li{
 html{
     height: 100vh;
     overflow-y: auto;
-    scroll-snap-type: y mandatory; /*isso permite a snap scroll na vertical*/
+    scroll-snap-type: y mandatory;
+    /* overflow: hidden; */
 }
 
-/*são os filhos(intens/telas) que irão aparecer na snap-scroll*/
+/*são os filhos(itens/telas) que irão aparecer na snap-scroll*/
 section{
     height: 100vh;
-    scroll-snap-align: end; /*aonde que alinha a snap*/
+    scroll-snap-align: end;
 }
 
 /*estilização da nav bar*/
@@ -55,18 +55,22 @@ header {
     z-index: 5;
 }
 
-
-
 #sidemenu{
     height: 100%;
-    width: 180px;
-    position: absolute;
+    width: 200px;
+    position: fixed;
     background: var(--secondary-two);
     transition: 0.5s ease;
-    transform: translateX(-200px);
+    transform: translateX(-220px);
+    z-index: 100;
 }
-/* colocar aqui a estilização da lista */
-
+nav{
+    width: 200px;
+    top: 0;
+    left: 0;
+    position:fixed;
+    z-index: 100;
+}
 
 #navbar{
     list-style: none;
@@ -74,79 +78,95 @@ header {
     top: 0;
     left: 0;
     float: left;
-    margin: 1% 5%;
+    margin: 43% 5%;
+    z-index: 10;
 }
 
 #logo {
     position: fixed;
     top: 10px;
-    left: 50px;
+    left: 80px;
     width: 80px;
     height: 80px;
     opacity: 1;
     z-index: 10;
 }
 
+/* checkbox invisivel, apenas para ativar a sidebar */
 input[type="checkbox"]{
     display: none;
     visibility: hidden;
     appearance: none;
 }
 
-
-/* estilização do ícone de menu */
 #icon_menu{
     position:fixed;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     top: 15px;
     left: 15px;
     background: var(--secondary);
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     cursor: pointer;
-    z-index: 20;
+    z-index: 110;
 }
 
 .line{
     position:absolute;
-    height: 3px;
-    width: 20px;
-    background: var(--primary);
-    border-radius: 20%;
+    height: 4px;
+    width: 25px;
+    background: #0A254C;
+    border-radius: 10%;
     transition: all 0.3s ease;
     left: 20%;
-    /* transform: translateX(-50%); */
 }
 
 #topline{
-    top: 6px;
+    top: 20%;
 }
 
 #middleline{
-    top:13px;
+    top:42%;
 }
 
 #bottomline{
-    top: 20px;
+    top: 64%;
 }
 
 /* tranformação e movimentação do menu */
 input:checked ~ #sidemenu{
     transform: translateX(0);
-    box-shadow: 0 0 150px rbga(0,0,0,0.5);
+    box-shadow: 0 0 70px 70px rgba(0,0,0,0.5);
     
 }
-nav{
-    /* background: var(--black); */
-    position:fixed;
-    z-index: 100;
+
+#icon_menu .line {
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
-/* https://www.youtube.com/watch?v=1TZjgQ0Osic */
+input:checked + label #icon_menu #topline {
+    left: 5px;
+    top: 18px;
+    width: 30px;
+    transform: rotate(45deg) ;
+}
+
+input:checked + label #icon_menu #middleline {
+    transform: translateX(-180px);
+    opacity: 0; 
+}
+
+input:checked + label #icon_menu #bottomline {
+    left: 5px;
+    top: 18px;
+    width: 30px;
+    transform: rotate(-45deg) ;
+}
 
 #sidemenu ul li a img{
-    width: 40px;
+    width: 30px;
 }
 
 #sidemenu li a{
@@ -222,11 +242,6 @@ cursor:default;
     z-index: 11;
 }
 
-/* posicionamento do titulo principal */
-#tituloprincipal{
-    margin-top: 12%;
-}
-
 /* estilização do titulo principal */
 span.titulo_principal{
     color: var(--primary-dark);
@@ -246,10 +261,6 @@ span.titulo_principal{
     letter-spacing: 1px;
 }
 
-#pfinal{
-    margin-top: 10%;
-    font-size: 1.5em;
-}
 
 #wiki{
     color: var(--white);
@@ -297,7 +308,6 @@ span.titulo_principal{
     float: left;
     margin-top: 50px;
     margin-left: auto;
-    /* margin-right: auto; */
 }
 
 
@@ -314,10 +324,9 @@ span.titulo_principal{
     text-decoration: underline;
 }
 
-
 /*estilização dos gifs de funções*/
 .gif{
-    width: 280px;
+    width: 250px;
     border: 2px solid var(--secondary);
     float:left;
     margin: 10px;
@@ -336,19 +345,19 @@ span.titulo_principal{
 .mb-group,
 .op-group,
 .li-group{
-    display: flex;
+    display:inlnie-grid;
     /*flex para se organizarem*/
 }
 
 .hover_func:hover h3{
     color: var(--primary);
     cursor: default;
-
+    
 }
 
 
 #plyr_func{
-
+    
     position: absolute;
 }
 
@@ -386,13 +395,14 @@ table#brasil_achivements {
 #brasil_achivements td, #brasil_achivements th{
     padding: 10px;
     text-align: center;
-
+    
+}
+#pfinal{
+    margin-top: 10%;
+    font-size: 1.5em;
 }
 
 /**fotter**/
-
-
-
 
 footer {
     position: absolute;
@@ -418,7 +428,7 @@ footer {
 
 .ft_block ul{
     padding: 1em;
-   
+    
 }
 
 .ft_block {
@@ -467,6 +477,11 @@ footer {
     outline: none;
     border-bottom: 2px solid var(--secondary);
     color: var(--secondary-two);
+    transition: 0.5s ease;
+}
+
+.campo_ft input:hover {
+    border-bottom: 2px solid var(--primary-dark);
 }
 
 /*estilizando botão submit(inscrever-se)*/
