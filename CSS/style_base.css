@@ -40,13 +40,12 @@ html{
     height: 100vh;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
-    /* overflow: hidden; */
 }
 
 /*são os filhos(itens/telas) que irão aparecer na snap-scroll*/
 section{
     height: 100vh;
-    scroll-snap-align: end;
+    scroll-snap-align: start;
 }
 
 /*estilização da nav bar*/
@@ -326,7 +325,7 @@ span.titulo_principal{
 
 /*estilização dos gifs de funções*/
 .gif{
-    width: 250px;
+    width: 230px;
     border: 2px solid var(--secondary);
     float:left;
     margin: 10px;
@@ -338,15 +337,6 @@ span.titulo_principal{
 .imagens_func{
     position: absolute;
     top:100%;
-}
-
-.set-group,
-.ws-group,
-.mb-group,
-.op-group,
-.li-group{
-    display:inlnie-grid;
-    /*flex para se organizarem*/
 }
 
 .hover_func:hover h3{
@@ -417,6 +407,10 @@ footer {
     height: 100vh;
     flex-direction: column;
     justify-content:end;
+}
+
+#ft_contact{
+    padding-left:5%;
 }
 
 .ft_block span{

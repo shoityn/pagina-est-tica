@@ -30,6 +30,13 @@
     background-attachment: fixed;
 }
 
+#back5b{
+    background: url(../img/fundorede.jpg) no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+
 #back6{
     background: url(../img/fundosergio.jpg) no-repeat;
     background-size:cover;
