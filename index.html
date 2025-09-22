@@ -1,129 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/style_base.css">
-    <link rel="stylesheet" href="/CSS/animation.css">
-    <link rel="stylesheet" href="/CSS/style_img.css">
+    <meta name="author" content="Glauber Shoity Nakai">
+    <link rel="stylesheet" href="CSS/style_base.css">
+    <link rel="stylesheet" href="CSS/animation.css">
+    <link rel="stylesheet" href="CSS/style_img.css">
+    <link rel="stylesheet" href="CSS/quadra.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
     <title>Mundo do Vôlei</title>
 </head>
+
 <body>
 
     <!-- ******  HEADER    ***** -->
+
     <header>
-        <div id="logo">
-            <h1><a href="index.html" id="txt_logo">Mundo do Vôlei</a></h1>
-        </div>
-
-        <!-- *navegação* -->
         <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#history">História</a></li>
-                <li><a href="#rules">Regras</a></li>
-                <li><a href="#positions">Posições e Rotação</a></li>
-                <li><a href="#roles">Funções dos Jogadores</a></li>
-                <li><a href="#brazil">Sobre o Brasil</a></li>
-            </ul>
+            <input type="checkbox" id="menu_btn">
+    
+            <label for="menu_btn">
+                <div id="icon_menu">
+                    <span class="line" id="topline"></span>
+                    <span class="line" id="middleline"></span>
+                    <span class="line" id="bottomline"></span>
+                </div>
+            </label>
+    
+            <div id="sidemenu">
+                <img src="img/logo.png" id="logo" alt="">
+                <ul id="navbar">
+                    <li><a class="home-link" href="#inicio"><img src="img/home.png" alt=""> Início</a></li>
+                    <li><a href="#history"><img src="img/history.png" alt=""> História</a></li>
+                    <li><a href="#rules"><img src="img/rules.png" alt=""> Regras</a></li>
+                    <li><a href="#positions"><img src="img/rotation.png" alt=""> Posições e Rotação</a></li>
+                    <li><a href="#roles"><img src="img/roles.png" alt=""> Funções dos Jogadores</a></li>
+                    <li><a href="#brazil"><img src="img/brasil.png" alt=""> Sobre o Brasil</a></li>
+                    <li><a href="#wrap_last"><img src="img/about.png" alt=""> Contatos</a></li>
+                </ul>
+            </div>
         </nav>
-
-        <div style="clear: both;"></div>
-
     </header>
 
     <!-- ******  MAIN   ***** -->
     <main>
-        
+
         <article>
             <!-- ***introdução*** -->
-            
-            <div class="fundos" id="back1">
-                <div class="titulo_fundo"><span class="titulo">bem-vindo ao mundo do Volei</span></div>
-            </div>
             <section class="conteudo" id="inicio">
 
-                <h1>Bem-vindo ao Mundo do Vôlei</h1>
-                <p>
-                    Este site foi criado com o objetivo de compartilhar conhecimentos, curiosidades e informações completas sobre um dos esportes mais emocionantes do mundo: o vôlei. 
-                    Aqui, você vai aprender o básico sobre a história do esporte, suas regras, posições dos jogadores, grandes nomes que marcaram época, e muito mais.
-                </p>
-                <p>
-                    Se você é um fã apaixonado, estudante, atleta ou apenas curioso sobre como funciona o voleibol, este espaço é para você!
-                    Navegue pelos tópicos e descubra tudo sobre esse esporte que une técnica, trabalho em equipe e emoção.
-                </p>
+                <div class="fundos" id="back1">
+           
+
+                    <div class="titulo_fundo" id="tituloprincipal"><span class="titulo_principal">bem-vindo ao mundo do Vôlei</span></div>
+                </div>
+
             </section>
-            
+
             <!-- ***história*** -->
-            <div class="fundos" id="back2">
-                <div class="titulo_fundo"><span class="titulo">história do vôlei</span></div>
-            </div>
             <section class="conteudo" id="history">
-                <h2>História do Vôlei</h2>
-                <p>
-                    O voleibol foi criado em 1895, nos Estados Unidos, por William G. Morgan, um professor de educação física. Ele buscava um esporte menos agressivo que o basquete, mas que ainda promovesse atividade física e cooperação em grupo. 
-                    Assim surgiu o "mintonette", nome original do vôlei, que mais tarde foi renomeado para "volleyball".
-                </p>
+                <div class="fundos" id="back2">
+                    <div class="titulo_fundo"><span class="titulo">história do vôlei</span></div>
 
-                <p>
-                    O esporte rapidamente se espalhou pelo mundo, sendo introduzido nas Filipinas, Japão, Europa e América Latina nas décadas seguintes. A popularidade do vôlei cresceu tanto que ele foi incluído como esporte olímpico em 1964, nos Jogos de Tóquio.
-                </p>
+                    <p>
+                        O voleibol foi criado em 1895, nos Estados Unidos, por William G. Morgan, um professor de
+                        educação física. Ele buscava um esporte menos agressivo que o basquete, mas que ainda promovesse
+                        atividade física e cooperação em grupo.
+                        Assim surgiu o "mintonette", nome original do vôlei, que mais tarde foi renomeado para
+                        "volleyball".
+                    </p>
 
-                <p>
-                    No Brasil, o vôlei chegou por volta de 1915 e se tornou um dos esportes mais praticados e vitoriosos do país. As seleções brasileiras, tanto masculina quanto feminina, conquistaram diversos títulos mundiais e olímpicos, consolidando o país como uma das potências da modalidade.
-                </p>
+                    <p>
+                        O esporte rapidamente se espalhou pelo mundo, sendo introduzido nas Filipinas, Japão, Europa e
+                        América Latina nas décadas seguintes. A popularidade do vôlei cresceu tanto que ele foi incluído
+                        como esporte olímpico em 1964, nos Jogos de Tóquio.
+                    </p>
 
-                <img src="/img/criador.jpg" alt="">
-                <span> Fonte: <a href="https://pt.wikipedia.org/wiki/Voleibol">wikipedia</a></span>
+                    <p>
+                        No Brasil, o vôlei chegou por volta de 1915 e se tornou um dos esportes mais praticados e
+                        vitoriosos do país. As seleções brasileiras, tanto masculina quanto feminina, conquistaram
+                        diversos títulos mundiais e olímpicos, consolidando o país como uma das potências da modalidade.
+                    </p>
+                    <img src="img/criador.jpg" id="creator" alt=""> <br>
+                    <span id="wiki"> Fonte: <a id="wikiref"
+                            href="https://pt.wikipedia.org/wiki/Voleibol">wikipedia</a></span>
+
+                </div>
+
             </section>
-            
+
             <!-- ***regras*** -->
-            <div class="fundos" id="back3">
-                <div class="titulo_fundo"><span class="titulo">regras do vôlei</span></div>
-             </div>
             <section class="conteudo" id="rules">
-                <h2>Regras do Vôlei</h2>
-                <p>
-                    O vôlei é disputado por duas equipes, com seis jogadores de cada lado, separadas por uma rede. O objetivo é fazer a bola tocar o chão da quadra adversária, marcando pontos, enquanto se evita que a bola caia na própria quadra.
-                </p>
+                <div class="fundos" id="back3">
+                    <div class="titulo_fundo"><span class="titulo">regras do vôlei</span></div>
+                    <p>
+                        O vôlei é disputado por duas equipes, com seis jogadores de cada lado, separadas por uma rede. O
+                        objetivo é fazer a bola tocar o chão da quadra adversária, marcando pontos, enquanto se evita
+                        que a bola caia na própria quadra.
+                    </p>
 
-                <p>
-                    Uma partida oficial é composta por até cinco sets. A equipe que vencer três sets primeiro, vence o jogo. Cada set vai até 25 pontos (com diferença mínima de dois pontos), exceto o quinto set, que vai até 15 pontos.
-                </p>
+                    <p>
+                        Uma partida oficial é composta por até cinco sets. A equipe que vencer três sets primeiro, vence
+                        o jogo. Cada set vai até 25 pontos (com diferença mínima de dois pontos), exceto o quinto set,
+                        que vai até 15 pontos.
+                    </p>
 
-                <p>
-                    Cada equipe pode tocar a bola até três vezes antes de enviá-la para o outro lado. Um mesmo jogador não pode tocar duas vezes seguidas na bola. As jogadas envolvem recepção, levantamento, ataque (corte), bloqueio e defesa.
-                </p>
+                    <p>
+                        Cada equipe pode tocar a bola até três vezes antes de enviá-la para o outro lado. Um mesmo
+                        jogador não pode tocar duas vezes seguidas na bola. As jogadas envolvem recepção, levantamento,
+                        ataque (corte), bloqueio e defesa.
+                    </p>
 
-                <p>
-                    Algumas infrações comuns são: invasão da quadra adversária, toque na rede, mais de três toques na bola e rotação incorreta dos jogadores.
-                </p>
+                    <p>
+                        Algumas infrações comuns são: invasão da quadra adversária, toque na rede, mais de três toques
+                        na bola e rotação incorreta dos jogadores.
+                    </p>
+                    <br>
+                    <a id="search_more"
+                        href="https://www2.fpv.com.br/wp-content/uploads/2025/02/Regras-Oficiais-Voleibol-2025_2028.pdf">Saiba
+                        mais</a>
+                </div>
 
-                <a href="https://www2.fpv.com.br/wp-content/uploads/2025/02/Regras-Oficiais-Voleibol-2025_2028.pdf">Saiba mais</a>
             </section>
 
             <!-- ***Rotação e posicionamento do Volei***  -->
 
-             <div class="fundos" id="back4">
-                <div class="titulo_fundo"><span class="titulo">posicionamento e rotação</span></div>
-             </div>
             <section class="conteudo" id="positions">
-                <h2>Posicionamento e rotação no Vôlei</h2>
-                <p>
-                    Em uma partida de vôlei, cada equipe entra em quadra com seis jogadores dispostos em posições específicas, divididas entre a zona de ataque (frente) e a zona de defesa (fundo). Essas posições são numeradas de 1 a 6 no sentido horário, começando pelo jogador que está sacando (posição 1).
-                </p>
+                <div class="fundos" id="back4">
+                    <div class="titulo_fundo"><span class="titulo">posicionamento e rotação</span></div>
+                    <p>
+                        Em uma partida de vôlei, cada equipe entra em quadra com seis jogadores dispostos em posições
+                        específicas, divididas entre a zona de ataque (frente) e a zona de defesa (fundo). Essas
+                        posições são numeradas de 1 a 6 no sentido horário, começando pelo jogador que está sacando
+                        (posição 1).
+                    </p>
 
-                <p>
-                     rotação acontece sempre que a equipe conquista o direito de sacar após vencer um ponto em que o adversário estava com o saque. Nesse momento, os jogadores giram uma posição no sentido horário, alterando sua posição na quadra. Apesar da rotação, cada jogador continua exercendo sua função principal (levantador, líbero, etc.), mas precisa respeitar a posição em que está no momento do saque.
-                </p>
-
-                <img src="/img/position.png" alt="">
-                <br>
-                
-                <span>Fonte: <a href="https://educacaofisicanamente.blogspot.com/2012/05/taticas-basicas-do-voleibol.html">Educação Física na Mente</a></span>
-            
-                <!-- QUADRA DE ROTAÇÃO ANIMADA -->
-                <div id="quadra">
+                    <p>
+                        rotação acontece sempre que a equipe conquista o direito de sacar após vencer um ponto em que o
+                        adversário estava com o saque. Nesse momento, os jogadores giram uma posição no sentido horário,
+                        alterando sua posição na quadra. Apesar da rotação, cada jogador continua exercendo sua função
+                        principal (levantador, líbero, etc.), mas precisa respeitar a posição em que está no momento do
+                        saque.
+                    </p>
+                    <div id="posicao_quadra">
+                        <img src="img/position.png" id="position" alt="">
+                        <span id="fonteposition">Fonte: <a id="linkposition"
+                                href="https://educacaofisicanamente.blogspot.com/2012/05/taticas-basicas-do-voleibol.html">Educação
+                                Física na Mente</a></span>
+                    </div>
+                    <!-- QUADRA DE ROTAÇÃO ANIMADA -->
+                    <div id="quadra1" class="quadra">
                         <div id="linha"></div>
                         <div class="player" id="ply_4">4</div>
                         <div class="player" id="ply_3">3</div>
@@ -132,195 +160,314 @@
                         <div class="player" id="ply_5">5</div>
                         <div class="player" id="ply_6">6</div>
                         <div class="player" id="ply_1">1</div>
+                    </div>
                 </div>
-        </section>
+            </section>
 
             <!-- ***funções dos jogadores*** -->
-            
-             <div class="fundos" id="back5">
-                <div class="titulo_fundo"><span class="titulo">funções dos jogadres</span></div>
-             </div>
             <section class="conteudo" id="roles">
-                <h2>Funções dos Jogadores</h2>
-                <p>
-                    Embora todos os jogadores participem do jogo coletivamente, cada um possui uma função específica, com responsabilidades bem definidas dentro da equipe. Essas funções são essenciais para o equilíbrio tático e o desempenho técnico da equipe durante a partida.
-                </p>
-                <p>
-                    Entender essas funções ajuda a acompanhar melhor as partidas e valorizar o trabalho em equipe. 
-                </p>
+                <div class="fundos" id="back5">
+                    <div class="titulo_fundo"><span class="titulo">funções dos jogadores</span></div>
+                    <p>
+                        Embora todos os jogadores participem do jogo coletivamente, cada um possui uma função
+                        específica, com responsabilidades bem definidas dentro da equipe. Essas funções são essenciais
+                        para o equilíbrio tático e o desempenho técnico da equipe durante a partida.
+                    </p>
 
-                <p>
-                    A seguir, você vai conhecer as principais funções dos jogadores no vôlei:
-                </p>
+                    <!-- *Funções* -->
+                    <div id="plyr_func">
 
-                <!-- *Funções* -->
-                <div id="plyr_func">     
-                    <h3>Levantador</h3>
-                    <p> O levantador é considerado o <strong>Cérebro da equipe</strong>. Sua principal função é distribuir as jogadas, realizando o levantamento da bola para que os atacantes possam finalizar o ponto. Ele precisa ter excelente visão de jogo, rapidez de raciocínio e precisão nos toques.</p>
-                    
-                    <h3>Pontas</h3>
-                    <p>Os ponteiros são jogadores versáteis, responsáveis por atacar principalmente pelas extremidades da rede (posições 4 e 6), além de ajudar na recepção do saque adversário. Por isso, precisam ter bom <strong>domínio tanto ofensivo quanto defensivo.</strong></p>
-                    
-                    <h3>Centrais</h3>
-                    <p>
-                        Os centrais, também chamados de "meios de rede", são os principais responsáveis pelo <strong>bloqueio e pelos ataques rápidos</strong> pelo meio da quadra (posição 3). Eles precisam ter excelente impulsão, leitura de jogo e velocidade.
-                    </p>
-                    
-                    <h3>Oposto</h3>
-                    <p>
-                        O oposto é o <strong>Principal Atacante</strong> da equipe. Ele joga no lado oposto ao do levantador (por isso o nome), geralmente na posição 2 (zona de ataque). Sua função principal é pontuar, tanto na rede quanto do fundo, com ataques potentes.
-                    </p>
-                    
-                    <h3>Líbero</h3>
-                    <p>
-                        O líbero é um <strong>jogador especializado na defesa e na recepção</strong>. Ele não pode atacar, sacar ou bloquear, e atua sempre na linha de trás (defesa). Usa um uniforme diferente dos demais para ser facilmente identificado.
-                    </p>
-                    
-                    <p>
-                        Sua função é garantir uma boa recepção e manter a bola viva no fundo de quadra. O líbero substitui os jogadores de ataque (geralmente centrais) na rotação do fundo, sem limite de substituições.
-                    </p>
+                        <div id="s" class="hover_func">
+                            <h3>Levantador</h3>
+                            <p> O levantador é considerado o <strong>Cérebro da equipe</strong>. Sua principal função é
+                                distribuir as jogadas, realizando o levantamento da bola para que os atacantes possam
+                                finalizar o ponto. Ele precisa ter excelente visão de jogo, rapidez de raciocínio e
+                                precisão
+                                nos toques.
+                            </p>
+
+                        </div>
+                        <div class="set-group imagens_func">
+                            <img id="set1" class="gif set" src="img/set.gif" alt="">
+                            <img id="set2" class="gif set" src="img/set2.gif" alt="">
+                            <img id="set3" class="gif set" src="img/set3.gif" alt="">
+                        </div>
+
+
+                        <div id="ws" class="hover_func">
+                            <h3>Pontas</h3>
+                            <p>Os ponteiros são jogadores versáteis, responsáveis por atacar principalmente pelas
+                                extremidades da rede (posições 4 e 6), além de ajudar na recepção do saque adversário.
+                                Por
+                                isso, precisam ter bom <strong>domínio tanto ofensivo quanto defensivo.</strong>
+                            </p>
+                        </div>
+                        <div class="ws-group imagens_func">
+                            <img id="ws1" class="gif ws" src="img/ws1.gif" alt="">
+                            <img id="ws2" class="gif ws" src="img/ws2.gif" alt="">
+                            <img id="ws3" class="gif ws" src="img/ws3.gif" alt="">
+                        </div>
+
+                        <div id="mb" class="hover_func">
+                            <h3>Centrais</h3>
+                            <p>
+                                Os centrais, também chamados de "meios de rede", são os principais responsáveis pelo
+                                <strong>bloqueio e pelos ataques rápidos</strong> pelo meio da quadra (posição 3). Eles
+                                precisam ter excelente impulsão, leitura de jogo e velocidade.
+                            </p>
+                        </div>
+                        <div class="mb-group imagens_func">
+                            <img id="mb1" class="gif mb" src="img/mb1.gif" alt="">
+                            <img id="mb2" class="gif mb" src="img/mb2.gif" alt="">
+                            <img id="mb3" class="gif mb" src="img/mb3.gif" alt="">
+                        </div>
+
+                        <div id="op" class="hover_func">
+                            <h3>Oposto</h3>
+                            <p>
+                                O oposto é o <strong>Principal Atacante</strong> da equipe. Ele joga no lado oposto ao
+                                do
+                                levantador (por isso o nome), geralmente na posição 2 (zona de ataque). Sua função
+                                principal
+                                é pontuar, tanto na rede quanto do fundo, com ataques potentes.
+                            </p>
+                        </div>
+                        <div class="op-group imagens_func">
+                            <img id="op1" class="gif op" src="img/op1.gif" alt="">
+                            <img id="op2" class="gif op" src="img/op2.gif" alt="">
+                            <img id="op3" class="gif op" src="img/op3.gif" alt="">
+                        </div>
+
+                        <div id="li" class="hover_func">
+                            <h3>Líbero</h3>
+                            <p>
+                                O líbero é um <strong>jogador especializado na defesa e na recepção</strong>. Ele não
+                                pode
+                                atacar, sacar ou bloquear, e atua sempre na linha de trás (defesa). Usa um uniforme
+                                diferente dos demais para ser facilmente identificado.
+                            </p>
+
+                            <p>
+                                Sua função é garantir uma boa recepção e manter a bola viva no fundo de quadra. O líbero
+                                substitui os jogadores de ataque (geralmente centrais) na rotação do fundo, sem limite
+                                de
+                                substituições.
+                            </p>
+                        </div>
+                        <div class="li-group imagens_func">
+                            <img id="li1" class="gif li" src="img/li1.gif" alt="">
+                            <img id="li2" class="gif li" src="img/li2.gif" alt="">
+                            <img id="li3" class="gif li" src="img/li3.gif" alt="">
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <h3>Resumo</h3>
-                <p>
-                    Embora cada jogador tenha sua função específica dentro da equipe, todos podem realizar as principais ações do jogo, como recepção, levantamento, defesa e ataque, desde que respeitem as regras da posição em que estão. O vôlei é um esporte coletivo em que a colaboração entre as diferentes funções é essencial para o bom desempenho do time.
-                </p>
+            <section class="conteudo" id="roles2">
+                <div class="fundos" id="back5b">
+                    <div class="titulo_fundo"><span class="titulo">funções dos jogadores</span></div>
 
-                <p>
-                    Cada posição tem características próprias que exigem habilidades específicas. O levantador organiza as jogadas, os atacantes (pontas, centrais e oposto) têm a missão de finalizar os pontos, enquanto o líbero se especializa na defesa e recepção. Mesmo com essas funções definidas, a integração entre os jogadores é o que garante a fluidez e a eficácia das jogadas.
-                </p>
+                    <p>
+                        Embora cada jogador tenha sua função específica dentro da equipe, todos podem realizar as
+                        principais ações do jogo, como recepção, levantamento, defesa e ataque, desde que respeitem as
+                        regras da posição em que estão. O vôlei é um esporte coletivo em que a colaboração entre as
+                        diferentes funções é essencial para o bom desempenho do time.
+                    </p>
 
-                <p>
-                    Funções do Vôlei:
-                </p>
+                    <p>
+                        Cada posição tem características próprias que exigem habilidades específicas. Mesmo com essas
+                        funções
+                        definidas, a integração entre os jogadores é o que garante a fluidez e a eficácia das jogadas.
+                    </p>
 
-                <table style="border: 1px solid;">
-                    <tr>
-                        <th>Função</th>
-                        <th>Especialidade</th>
-                    </tr>
+                    <p>
+                        Funções do Vôlei:
+                    </p>
 
-                    <tr>
-                        <td>Levantador(L)</td>
-                        <td>Organiza e prepara o Ataque</td>
-                    </tr>
+                    <table id="table_func">
+                        <tr>
+                            <th>Função</th>
+                            <th>Posição na Quadra</th>
+                            <th>Especialidade</th>
+                            <th>Características</th>
+                        </tr>
+                        <tr>
+                            <th>Levantador(L)</th>
+                            <td>Geralmente posição 2 ou 3</td>
+                            <td>Distribuir as jogadas, levantar a bola para os atacantes finalizarem o ponto</td>
+                            <td>Visão de jogo, rapidez de raciocínio, precisão nos toques</td>
+                        </tr>
+                        <tr>
+                            <th>Ponta(P)</th>
+                            <td>Posições 4 e 6 (extremidades da rede)</td>
+                            <td>Atacar pelas extremidades, ajudar na recepção do saque adversário</td>
+                            <td>Versatilidade, bom domínio ofensivo e defensivo</td>
+                        </tr>
+                        <tr>
+                            <th>Central(C)</th>
+                            <td>Posição 3 (meio da quadra)</td>
+                            <td>Bloquear ataques adversários, realizar ataques rápidos pelo meio da quadra</td>
+                            <td>Excelente impulsão, leitura de jogo, velocidade</td>
+                        </tr>
+                        <tr>
+                            <th>Oposto(Op)</th>
+                            <td>Lado oposto ao levantador, posição 2</td>
+                            <td>Pontuar na rede e do fundo, atacar com força</td>
+                            <td>Potência nos ataques, capacidade de pontuar</td>
+                        </tr>
+                        <tr>
+                            <th>Líbero(Li)</th>
+                            <td>Linha de trás (defesa)</td>
+                            <td>Especialista em recepção e defesa, manter a bola viva, substituir jogadores de ataque no
+                                fundo</td>
+                            <td>Agilidade, reflexos, boa leitura de jogo defensiva, uso de uniforme diferenciado para
+                                identificação</td>
+                        </tr>
+                    </table>
 
-                    <tr>
-                        <td>Ponta(P)</td>
-                        <td>Versáteis na defesa e o ataque</td>
-                    </tr>
+                    <div id="quadra2" class="quadra">
+                        <div id="linha"></div>
+                        <div class="player" id="ply_Op">Op</div>
+                        <div class="player" id="ply_C1">C</div>
+                        <div class="player" id="ply_P2">P2</div>
 
-                    <tr>
-                        <td>Central(C)</td>
-                        <td>Bons no Bloqueio e Ataque Rápido pelo Centro</td>
-                    </tr>
+                        <div class="player" id="ply_P1">P1</div>
+                        <div class="player" id="ply_Li">Li</div>
+                        <div class="player" id="ply_L">L</div>
+                    </div>
 
-                    <tr>
-                        <td>Oposto(O)</td>
-                        <td>Principal Atacante especialista no ataque</td>
-                    </tr>
-
-                    <tr>
-                        <td>Libero(Lb)</td>
-                        <td>Especialista na Defesa e Recepção. Não ataca nem saca</td>
-                    </tr>
-
-                </table>
-
+                </div>
             </section>
 
             <!-- ***sobre o Brasil*** -->
-
-             <div class="fundos" id="back6">
-                <div class="titulo_fundo"><span class="titulo">Vôlei  o Brasil</span></div>
-             </div>
             <section class="conteudo" id="brazil">
-                <h2>Sobre o Brasil</h2>
-                <p>
-                    O Brasil, reconhecido mundialmente por sua paixão e talento no esporte, tem um legado especial no voleibol, marcado por jogadores históricos que não apenas brilharam nas quadras, mas também moldaram a identidade do vôlei nacional e internacional. 
-                </p>
-                <p>
-                    A trajetória desses ícones do vôlei brasileiro transcendeu as conquistas esportivas, tornando-se parte integrante da rica tapeçaria do esporte no país. 
-                </p>
+                <div class="fundos" id="back6">
+                    <div class="titulo_fundo"><span class="titulo">Vôlei no Brasil</span></div>
+                    <p>
+                        O Brasil, reconhecido mundialmente por sua paixão e talento no esporte, tem um legado especial
+                        no voleibol, marcado por jogadores históricos que não apenas brilharam nas quadras, mas também
+                        moldaram a identidade do vôlei nacional e internacional.
+                    </p>
+                    <p>
+                        A trajetória desses ícones do vôlei brasileiro transcendeu as conquistas esportivas, tornando-se
+                        parte integrante da rica tapeçaria do esporte no país.
+                    </p>
 
-                <h3>Conquistas do Brasil</h3>
-                <p>
-                    Desde as primeiras participações olímpicas, o voleibol brasileiro consolidou-se como potência mundial. Até Paris 2024, o país soma 26 medalhas olímpicas no voleibol, distribuídas em 9 ouros, 11 pratas e 6 bronzes. A distribuição por modalidade e gênero é a seguinte:
-                </p>
-                <ul>
-                    <li>Vôlei de quadra — Masculino: 6 medalhas (3 ouros, 3 pratas).</li>
-                    <li>Vôlei de quadra — Feminino: 6 medalhas (2 ouros, 1 prata, 3 bronzes).</li>
-                    <li>Vôlei de praia — Masculino: 6 medalhas (2 ouros, 3 pratas, 1 bronze).</li>
-                    <li>Vôlei de praia — Feminino: 8 medalhas (2 ouros, 4 pratas, 2 bronzes).</li>
-                </ul>
-            </section>
+                    <h3 id="titulobrasil">Conquistas do Brasil</h3>
+                    <p>
+                        Desde as primeiras participações olímpicas, o voleibol brasileiro consolidou-se como potência
+                        mundial. Até Paris 2024, o país soma 26 medalhas olímpicas no voleibol, distribuídas em 9 ouros,
+                        11 pratas e 6 bronzes. A distribuição por modalidade e gênero é a seguinte:
+                    </p>
 
-            <div class="fundos" id="back7">
-                background 7
-             </div>
+                    <table id="brasil_achivements">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>categoria</th>
+                            <th>ouros</th>
+                            <th>prata</th>
+                            <th>bronze</th>
+                            <th>total</th>
+                        </tr>
+                        <tr>
+                            <td>Quadra</td>
+                            <td>Masculino</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>6 Medalhas</td>
+                        </tr>
+                        <tr>
+                            <td>Quadra</td>
+                            <td>Feminino</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>6 Medalhas</td>
+                        </tr>
+                        <tr>
+                            <td>Praia</td>
+                            <td>Masculino</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>6 Medalhas</td>
+                        </tr>
+                        <tr>
+                            <td>Praia</td>
+                            <td>Feminino</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>8 Medalhas</td>
+                        </tr>
 
-            <section class="conteudo" id="final">
-                <h2>Chegamos ao Final</h2>
-                <p>
-                    O voleibol é muito mais do que um esporte: é dedicação, trabalho em equipe e paixão pelo jogo.  
-                Ao conhecer sua história, regras e principais jogadores, percebemos como cada ponto, cada saque e cada defesa contribuem para momentos inesquecíveis dentro e fora das quadras.  
-                Que este espaço sirva como um convite para que mais pessoas se inspirem no vôlei, apreciem suas lendas e continuem celebrando a alegria desse esporte tão vibrante.
-                </p>
-
+                    </table>
+                </div>
             </section>
         </article>
-        
+
     </main>
-    
     <!-- ******  FOOTER   ***** -->
-    <footer>
-        <!-- *Contato* -->
-        <div id="ft_contact" class="ft_block">
+    <div id="wrap_last">
+        <section class="conteudo" id="final">
+            <div class="fundos" id="back7">
+                <div class="titulo_fundo"><span class="titulo_principal">Chegamos ao Final</span></div>
+                <p id="pfinal">
+                    O voleibol é muito mais do que um esporte: é dedicação, trabalho em
+                    equipe e paixão pelo jogo. Ao conhecer sua história, regras e principais
+                    jogadores, percebemos como cada ponto, cada saque e cada defesa contribuem
+                    para momentos inesquecíveis dentro e fora das quadras. Que este espaço
+                    sirva como um convite para que mais pessoas se inspirem no vôlei, apreciem
+                    suas lendas e continuem celebrando a alegria desse esporte tão vibrante.
+                </p>
 
-            <span>Contatos</span>
-            <ul id="contatos">
-                <li><a href="">(44)4002-8922</a></li>
-                <li><a href="">mundodovolei@gmail.com</a></li>
-                <li><a href="">@mundovolei</a></li>
-                <li><a href="">@mundovolei</a></li>
-            </ul>
-        </div>
-
-        <div id="ft_help" class="ft_block">
-            <span>Ajuda</span>
-            <ul>
-
-                <li><a href="">FAQ</a></li>
-                <li><a href="">Suporte</a></li>
-                <li><a href="">Termos e Condições</a></li>
-            </ul>
-
-        </div>
-
-        <div id="ft_notices" class="ft_block">
-            <span>Receba notícias:</span>
-
-            <form action="">
-
-                <div id="campos">
-                    <div class="campo_ft" id="nome">
-                        <input type="text" name="name" placeholder="Nome" required>
+                <footer>
+                    <!-- *Contato* -->
+                    <div id="ft_contact" class="ft_block">
+                        <span>Contatos</span>
+                        <ul id="contatos">
+                            <li><img class="icons" src="img/telephone.png" alt=""><a href="">(44)98451-1399</a></li>
+                            <li><img class="icons" src="img/email.png" alt=""><a href="">glaubershoity@gmail.com</a>
+                            </li>
+                            <li><img class="icons" src="img/instagram.png" alt=""><a href="">@mundovolei</a></li>
+                            <li><img class="icons" src="img/facebook.png" alt=""><a href="">@mundovolei</a></li>
+                        </ul>
                     </div>
-                    <br>
-                    <div class="campo_ft" id="email">
-                        <input type="text" placeholder="E-mail" required>
+
+                    <div id="ft_help" class="ft_block">
+                        <span>Ajuda</span>
+                        <ul>
+                            <li><img src="img/faq.png" alt="" class="icons"><a href="">FAQ</a></li>
+                            <li><img src="img/suport.png" alt="" class="icons"><a href="">Suporte</a></li>
+                            <li><img src="img/terms.png" alt="" class="icons"><a href="">Termos e Condições</a></li>
+                        </ul>
                     </div>
-                    
-                    <input type="submit" value="Inscrever-se">
-                </div>
-            </form>
 
-        </div>
+                    <div id="ft_notices" class="ft_block">
+                        <span>Receba notícias:</span>
+                        <form action="">
+                            <div id="campos">
+                                <div class="campo_ft" id="nome">
+                                    <input type="text" name="name" placeholder="Nome" required>
+                                </div>
+                                <div class="campo_ft" id="email">
+                                    <input type="email" placeholder="E-mail" required>
+                                </div>
+                                <input type="submit" id="submit" value="Inscrever-se">
+                            </div>
+                        </form>
+                    </div>
+
+                    <p id="copyright">&copy; 2025 Glauber Shoity - Todos os direitos Reservados</p>
+                </footer>
+            </div>
+        </section>
 
 
-        <p id="copyright">&copy; 2025 Mundo do Vôlei - Todos os direitos Reservados</p>
-    </footer>
 
+    </div>
 
 </body>
+
 </html>

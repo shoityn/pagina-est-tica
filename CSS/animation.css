@@ -15,7 +15,46 @@
     --100-y: %;
     --time-animation: 8s;
 }
+
+@keyframes rotation {
+    0% {
+        right: var(--0-x);
+        bottom: var(--0-y);
+    }
+
+    16%{
+        right: var(--16-x);
+        bottom: var(--16-y);
+    }
+
+    33% {
+        right: var(--33-x);
+        bottom: var(--33-y);
+    }
+
+    50% {
+        right: var(--50-x);
+        bottom: var(--50-y);
+    }
+
+    66% {
+        right: var(--66-x);
+        bottom: var(--66-y);
+    }
+
+    83%{
+        right: var(--83-x);
+        bottom: var(--83-y);
+    }
+
+    100% {
+        right: var(--100-x);
+        bottom: var(--100-y); 
+    }
+}
+
 /*
+    coordenadas de cada posição da quadra(right e bottom)
     posicoes 1: 10%   25% 
     posicoes 2: 10%   75% 
     posicoes 3: 44%   75% 
@@ -157,41 +196,26 @@
     animation-iteration-count: infinite;
 }
 
-
-
-@keyframes rotation {
-    0% {
-        right: var(--0-x);
-        bottom: var(--0-y);
+@keyframes appear_gif {
+    from{
+        transform: scale(0.3);
+        opacity: 0;
+        visibility: hidden;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
     }
 
-    16%{
-        right: var(--16-x);
-        bottom: var(--16-y);
-    }
 
-    33% {
-        right: var(--33-x);
-        bottom: var(--33-y);
-    }
+}
 
-    50% {
-        right: var(--50-x);
-        bottom: var(--50-y);
-    }
-
-    66% {
-        right: var(--66-x);
-        bottom: var(--66-y);
-    }
-
-    83%{
-        right: var(--83-x);
-        bottom: var(--83-y);
-    }
-
-    100% {
-        right: var(--100-x);
-        bottom: var(--100-y); 
-    }
+#s:hover ~ .set-group .gif,
+#ws:hover ~ .ws-group .gif,
+#mb:hover ~ .mb-group .gif,
+#op:hover ~ .op-group .gif,
+#li:hover ~ .li-group .gif
+{
+    animation: appear_gif 0.5s ease forwards;
 }

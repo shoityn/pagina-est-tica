@@ -1,42 +1,57 @@
+/* fundos de telas scroll-snap */
 #back1{
-    background: url(/img/fundobolas.jpg) no-repeat;
+    background: url(../img/fundobolas.jpg) no-repeat;
     background-size:cover;
     background-attachment: fixed;
 }
 
 #back2{
-    background: url(/img/fundocorte.jpg) no-repeat;
+    background: url(../img/fundocorte.jpg) no-repeat;
     background-size:cover;
     background-attachment: fixed;
 }
 
 #back3{
-    background: url(/img/fundoquadra.png) no-repeat;
+    background: url(../img/fundoquadra.png) no-repeat;
     background-size:cover;
     background-attachment: fixed;
 
 }
 
 #back4{
-    background: url(/img/fundoblock.jpg) no-repeat;
+    background: url(../img/fundoblock.jpg) no-repeat;
     background-size:cover;
     background-attachment: fixed;
 }
 
 #back5{
-    background: url(/img/fundorede.jpg) no-repeat;
+    background: url(../img/fundorede.jpg) no-repeat;
     background-size:cover;
     background-attachment: fixed;
 }
 
+#back5b{
+    background: url(../img/fundorede.jpg) no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+
 #back6{
-    background: url(/img/fundosergio.jpg) no-repeat;
+    background: url(../img/fundosergio.jpg) no-repeat;
     background-size:cover;
     background-attachment: fixed;
 }
 
 #back7{
-    background: url(/img/fundoteam.jpg) no-repeat;
+    background: url(../img/fundoteam.jpg) no-repeat;
     background-size:cover;
     background-attachment: fixed;
+}
+
+/*icones do rodapé*/
+.icons{
+    width: 20px;
+    height: 20px;
+    background-size: cover;
 }

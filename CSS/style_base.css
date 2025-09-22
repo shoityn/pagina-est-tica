@@ -1,60 +1,226 @@
-/* :root{
-    --primary: #fff;
-} */
-
-
-/**Formatações bases**/
-
-body,html {
-    margin: 0;
-    padding: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100%;
-    /* overflow: hidden; */
-
+:root{
+    --primary: #003C9E;
+    --primary-light:#00b0cf;
+    --primary-dark:#000B9E; 
+    --secondary:#9E7D00;
+    --secondary-two:#9E5500;
+    --dominant:#F2E1C4;
+    --white:white;
+    --black: #000;
 }
 
+/**Formatações bases**/
+body{
+    height: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--white);
+    min-width: 400px;
+    max-width: 1920px;
+}
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
 a {
     text-decoration: none;
 }
 
-
-nav a:link,
-nav a:visited {
-    color: #0C294E;
+li{
+    list-style: none;
 }
 
+/*Criação do snap-scroll*/
+
+/*aqui é o Pai(container) quem define o snap- scroll*/
+html{
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+}
+
+/*são os filhos(itens/telas) que irão aparecer na snap-scroll*/
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+/*estilização da nav bar*/
 header {
-    background: #daff09;
-    /* position: fixed; */
+    background: transparent;
     z-index: 5;
 }
 
-div#logo {
-    margin: 20px;
+#sidemenu{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    background: var(--secondary-two);
+    transition: 0.5s ease;
+    transform: translateX(-220px);
+    z-index: 100;
+}
+nav{
+    width: 200px;
+    top: 0;
+    left: 0;
+    position:fixed;
+    z-index: 100;
+}
+
+#navbar{
+    list-style: none;
+    position:fixed;
+    top: 0;
+    left: 0;
+    float: left;
+    margin: 43% 5%;
+    z-index: 10;
+}
+
+#logo {
+    position: fixed;
+    top: 10px;
+    left: 80px;
     width: 80px;
     height: 80px;
-    background-size: cover;
-    background: url(/img/logo.png) no-repeat;
-    text-indent: -9999px;
-    float: left;
+    opacity: 1;
+    z-index: 10;
 }
 
-nav ul {
-    list-style: none;
-    float: right;
-    margin: 1% 5%;
+/* checkbox invisivel, apenas para ativar a sidebar */
+input[type="checkbox"]{
+    display: none;
+    visibility: hidden;
+    appearance: none;
 }
 
-nav li {
-    float: left;
+#icon_menu{
+    position:fixed;
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    left: 15px;
+    background: var(--secondary);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    cursor: pointer;
+    z-index: 110;
+}
+
+.line{
+    position:absolute;
+    height: 4px;
+    width: 25px;
+    background: #0A254C;
+    border-radius: 10%;
+    transition: all 0.3s ease;
+    left: 20%;
+}
+
+#topline{
+    top: 20%;
+}
+
+#middleline{
+    top:42%;
+}
+
+#bottomline{
+    top: 64%;
+}
+
+/* tranformação e movimentação do menu */
+input:checked ~ #sidemenu{
+    transform: translateX(0);
+    box-shadow: 0 0 70px 70px rgba(0,0,0,0.5);
+    
+}
+
+#icon_menu .line {
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+input:checked + label #icon_menu #topline {
+    left: 5px;
+    top: 18px;
+    width: 30px;
+    transform: rotate(45deg) ;
+}
+
+input:checked + label #icon_menu #middleline {
+    transform: translateX(-180px);
+    opacity: 0; 
+}
+
+input:checked + label #icon_menu #bottomline {
+    left: 5px;
+    top: 18px;
+    width: 30px;
+    transform: rotate(-45deg) ;
+}
+
+#sidemenu ul li a img{
+    width: 30px;
+}
+
+#sidemenu li a{
+    color: var(--white);
     padding: 10px;
-    border: 1px solid #0C294E;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+    transition: 0.2s ease-out;
+}
+
+#sidemenu li a:hover{
+    color: var(--white);
+    background: var(--primary-light);
+}
+
+/**Estilização da página principal**/
+div.titulo_fundo + p {
+  margin-top: 3%;
+}
+
+/* tudo que não seja o titulo,navbar ou rodapé tem um margin lateral */
+.conteudo > .fundos >*:not(nav):not(.titulo_fundo):not(footer)
+{
+    margin-left: 10%;
+    margin-right: 10%;
+
+} 
+
+h3{
+    color: var(--primary-light);
+    backdrop-filter: blur(2px);
+    font-size: 2em;
+}
+
+h3#titulobrasil{
+    color: var(--white);
+}
+
+/*seleciona os ps e os li*/
+#brasil_achivements > li,
+p{
+color: white;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+background-color: rgba(0,0,0,0.3);
+backdrop-filter: blur(2px);
+padding: 5px;
+margin-top: 7px;
+border-radius: 8px;
+cursor:default;
 }
 
 .conteudo{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -63,97 +229,281 @@ nav li {
     width: 100%;
     opacity: 0.8;
     position:relative;
-    
+    object-position: center;
+    z-index: 0;
 }
 
 .titulo_fundo{
-    position: absolute;
-    top: 5%;
+    top: 3%;
     width: 100%;
     text-align: center;
     position: sticky;
+    z-index: 11;
+}
+
+/* estilização do titulo principal */
+span.titulo_principal{
+    color: var(--primary-dark);
+    font-size: 5em;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .titulo_fundo span.titulo{
-    color: #0C294E;
-    background: #c2c2c2;
+    color: var(--primary-dark);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background: var(--white);
     font-size: 3.5em;
     padding: 10px;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
 }
 
 
+#wiki{
+    color: var(--white);
+}
 
-/**estilização da quadra animada*/
-#quadra {
+#wikiref{
+    color: var(--white);
+}
+
+#wikiref:hover{
+    color: #9E7D00;
+    text-decoration:underline;
+}
+
+#creator{
+    width: 250px;
+}
+
+#search_more{
+    padding: 10px;
+    margin-bottom: 100px;
+    background: #ffffff;
+    transition: color ease 0.2s;
+    border-radius: 15px;
+    color: var(--secondary-two);
+}
+
+#search_more:hover{
+    background: var(--secondary);
+    color: var(--white);
+}
+
+#posicao_quadra{
+    margin-left: 25%;
+    float:left;
+    margin-right: 5%;
+}
+#position{
     width: 300px;
-    height: 300px;
-    border: 2px solid black;
-    background: #F78C59;
-    position: relative;
+    height: auto;
+    margin-top:80px;
 }
 
-#linha{
-    width: 300px;
-    height: 2px;
-    background: black;
-    margin-top: 100px;
-
+#quadra1{
+    float: left;
+    margin-top: 50px;
+    margin-left: auto;
 }
 
-.player {
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    /*define a altura da linha, importante para dimencionar/posicionar os texto*/
-    background: red;
-    border: 2px solid black;
-    border-radius: 100%;
+
+#linkposition, #fonteposition{
+    color: var(--white);
+}
+
+#fonteposition{
+    display: block;
+}
+
+#linkposition:hover{
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/*estilização dos gifs de funções*/
+.gif{
+    width: 230px;
+    border: 2px solid var(--secondary);
+    float:left;
+    margin: 10px;
+    z-index: 11;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.imagens_func{
+    position: absolute;
+    top:100%;
+}
+
+.hover_func:hover h3{
+    color: var(--primary);
+    cursor: default;
+    
+}
+
+
+#plyr_func{
+    
     position: absolute;
 }
 
+/*Estilização das tabelas*/
 
+#table_func{
+    background: var(--dominant);
+    margin-top:15px;
+    margin-bottom:15px;    
+}
+
+table#table_func{
+    border: 3px double var(--black);
+}
+
+#table_func td, #table_func th {
+    padding: 2px;
+    text-align: center;
+}
+
+#table_func tr:hover{
+    background:#ecd8b4 ;
+}
+
+#brasil_achivements{
+    background-color: var(--black);
+    margin-top: 15px;
+    color: var(--white);
+}
+
+table#brasil_achivements {
+    border: 4px outset var(--white);
+}
+
+#brasil_achivements td, #brasil_achivements th{
+    padding: 10px;
+    text-align: center;
+    
+}
+#pfinal{
+    margin-top: 10%;
+    font-size: 1.5em;
+}
 
 /**fotter**/
 
 footer {
-    border: 1px solid;
-
-    width: 80%;
+    position: absolute;
+    background: var(--dominant);
+    color: var(--secondary-two);
+    width: 100%;
     margin: 0 auto;
+    bottom: 0; 
+}
 
+#wrap_last{
+    height: 100vh;
+    flex-direction: column;
+    justify-content:end;
+}
+
+#ft_contact{
+    padding-left:5%;
+}
+
+.ft_block span{
+    text-transform: uppercase;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--secondary);
+    color: var(--secondary-two);
+}
+
+.ft_block ul{
+    padding: 1em;
+    
 }
 
 .ft_block {
-    border: 1px solid;
-
+    color: var(--secondary-two);
     float: left;
-    margin: 50px;
+    margin: 5%;
+    
+}
 
+.ft_block a{
+    color: var(--secondary);
+    padding-left:10px;
+    transition: color 0.2s ease;
+}
+
+.ft_block a:hover{
+    color: var(--primary-dark);
 }
 
 .ft_block li {
-
+    display: flex;
+    align-items: center;
     list-style: none;
     padding: 5px;
 }
 
 
+#nome{
+    margin-top: 20px;
+}
 
+#ft_notices input{
+    margin: 10px;
+    font-size: 1.2em;
+}
 
+#ft_notices input::placeholder{
+    color: var(--secondary);
+    font-size: 1em;
+}
+
+/*estilizar o campo selecionado*/
+.campo_ft input {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--secondary);
+    color: var(--secondary-two);
+    transition: 0.5s ease;
+}
+
+.campo_ft input:hover {
+    border-bottom: 2px solid var(--primary-dark);
+}
+
+/*estilizando botão submit(inscrever-se)*/
+input[type="submit"]{
+    border: 2px solid var(--secondary);
+    background: var(--dominant);
+    color: var(--secondary-two);
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 10px;
+    transition: color 0.2s ease;
+
+}
+
+input[type="submit"]:hover{
+    border: 2px solid var(--secondary-two);
+    background: var(--dominant);
+    color: var(--primary);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/*parte final de direitos do footer*/
 #copyright {
+    color: var(--black);
+    background: none;
+    text-shadow: none;
     clear: both;
-
     text-align: center;
 }
 
-
-#roles p {
-    margin: -2px 0;
-}
-
-#plyr_func h3 {
-    margin: -2px 0;
-}
